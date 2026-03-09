@@ -37,9 +37,9 @@ const advantages = [
 
 const Rental = () => {
     return (
-        <section id="rental" style={{ padding: '96px 0' }}>
+        <section id="rental" className="rental-section" style={{ padding: '96px 0' }}>
             <div style={{ maxWidth: '1300px', margin: '0 auto', padding: '0 32px' }}>
-                <div style={{
+                <div className="rental-container" style={{
                     background: '#2C3034',
                     borderRadius: '48px',
                     padding: '64px 48px',
@@ -81,10 +81,10 @@ const Rental = () => {
                         </div>
 
                         {/* Advantages strip */}
-                        <div style={{
+                        <div className="rental-advantages" style={{
                             display: 'flex',
                             flexWrap: 'wrap',
-                            gap: '24px',
+                            gap: '12px',
                             marginBottom: '48px',
                         }}>
                             {advantages.map((adv) => (
@@ -107,7 +107,7 @@ const Rental = () => {
                         </div>
 
                         {/* Equipment cards grid */}
-                        <div style={{
+                        <div className="rental-grid" style={{
                             display: 'grid',
                             gridTemplateColumns: 'repeat(2, 1fr)',
                             gap: '24px',
@@ -182,7 +182,7 @@ const Rental = () => {
                         </div>
 
                         {/* CTA */}
-                        <div style={{
+                        <div className="rental-cta" style={{
                             marginTop: '56px',
                             textAlign: 'center',
                             background: 'rgba(255,255,255,0.03)',
@@ -258,11 +258,28 @@ const Rental = () => {
             {/* Responsive */}
             <style>{`
                 @media (max-width: 768px) {
-                    #rental > div > div {
-                        padding: 36px 24px !important;
+                    .rental-section {
+                        padding: 64px 0 !important;
                     }
-                    #rental > div > div > div > div:nth-child(3) {
+                    .rental-section > div {
+                        padding: 0 16px !important;
+                    }
+                    .rental-container {
+                        border-radius: 28px !important;
+                        padding: 32px 20px !important;
+                    }
+                    .rental-grid {
                         grid-template-columns: 1fr !important;
+                        gap: 16px !important;
+                    }
+                    .rental-grid > div {
+                        padding: 24px !important;
+                        border-radius: 20px !important;
+                    }
+                    .rental-cta {
+                        padding: 32px 20px !important;
+                        margin-top: 32px !important;
+                        border-radius: 20px !important;
                     }
                 }
             `}</style>
