@@ -269,6 +269,48 @@ const Navbar = ({ scrolled }) => {
                             gap: '0',
                         }}
                     >
+                        {/* Close button */}
+                        <motion.button
+                            onClick={() => setIsOpen(false)}
+                            aria-label="Zamknij menu"
+                            initial={{ opacity: 0, rotate: -90 }}
+                            animate={{ opacity: 1, rotate: 0 }}
+                            transition={{ delay: 0.15, duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
+                            style={{
+                                position: 'absolute',
+                                top: '16px',
+                                right: '24px',
+                                width: '48px',
+                                height: '48px',
+                                borderRadius: '14px',
+                                border: 'none',
+                                background: 'linear-gradient(135deg, #CFA714, #E2C044)',
+                                cursor: 'pointer',
+                                display: 'flex',
+                                alignItems: 'center',
+                                justifyContent: 'center',
+                                boxShadow: '0 4px 16px rgba(207, 167, 20, 0.3), inset 0 1px 0 rgba(255,255,255,0.2)',
+                                zIndex: 9999,
+                            }}
+                        >
+                            <span style={{
+                                position: 'absolute',
+                                width: '22px',
+                                height: '2.5px',
+                                background: 'white',
+                                borderRadius: '3px',
+                                transform: 'rotate(45deg)',
+                            }} />
+                            <span style={{
+                                position: 'absolute',
+                                width: '22px',
+                                height: '2.5px',
+                                background: 'white',
+                                borderRadius: '3px',
+                                transform: 'rotate(-45deg)',
+                            }} />
+                        </motion.button>
+
                         {/* Logo */}
                         <img src="/dr_kangur_icon.png" alt="Logo" style={{ width: '56px', height: '56px', objectFit: 'contain', marginBottom: '32px' }} />
 
