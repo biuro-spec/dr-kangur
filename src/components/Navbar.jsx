@@ -92,7 +92,7 @@ const Navbar = ({ scrolled }) => {
                         position: 'relative',
                         zIndex: 1001,
                         alignSelf: 'flex-start',
-                        marginTop: scrolled ? '6px' : (windowWidth < 1024 ? '5px' : '104px'),
+                        marginTop: scrolled ? '6px' : (windowWidth < 1024 ? '60px' : '104px'),
                         width: scrolled ? '52px' : (windowWidth < 1024 ? '90px' : '132px'),
                         height: scrolled ? '52px' : (windowWidth < 1024 ? '110px' : '160px'),
                         transition: 'all 0.6s cubic-bezier(0.16, 1, 0.3, 1)',
