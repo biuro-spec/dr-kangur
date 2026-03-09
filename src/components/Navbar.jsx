@@ -243,149 +243,113 @@ const Navbar = ({ scrolled }) => {
                 </div>
             </nav>
 
-            {/* Mobile Menu — OUTSIDE nav */}
+            {/* Mobile Menu — fullscreen overlay */}
             <AnimatePresence>
                 {isOpen && (
-                    <>
-                        {/* Dark backdrop */}
+                    <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        transition={{ duration: 0.3 }}
+                        data-lenis-prevent
+                        style={{
+                            position: 'fixed',
+                            top: 0,
+                            left: 0,
+                            width: '100%',
+                            height: '100vh',
+                            zIndex: 9997,
+                            background: 'rgba(255, 255, 255, 0.97)',
+                            backdropFilter: 'blur(20px)',
+                            WebkitBackdropFilter: 'blur(20px)',
+                            display: 'flex',
+                            flexDirection: 'column',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            gap: '0',
+                        }}
+                    >
+                        {/* Logo */}
+                        <img src="/dr_kangur_icon.png" alt="Logo" style={{ width: '56px', height: '56px', objectFit: 'contain', marginBottom: '32px' }} />
+
+                        {/* Links */}
+                        {sectionLinks.map((link, i) => (
+                            <motion.a
+                                key={link.name}
+                                href={isHome ? link.href : '/' + link.href}
+                                onClick={(e) => {
+                                    setIsOpen(false);
+                                    if (!isHome) {
+                                        e.preventDefault();
+                                        navigate('/' + link.href);
+                                    }
+                                }}
+                                initial={{ opacity: 0, y: 20 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ delay: i * 0.04, duration: 0.3 }}
+                                style={{
+                                    fontSize: '1.1rem',
+                                    fontFamily: 'Outfit',
+                                    fontWeight: 700,
+                                    color: '#2C3034',
+                                    textDecoration: 'none',
+                                    textTransform: 'uppercase',
+                                    letterSpacing: '0.08em',
+                                    padding: '12px 0',
+                                }}
+                            >
+                                {link.name}
+                            </motion.a>
+                        ))}
                         <motion.div
-                            initial={{ opacity: 0 }}
-                            animate={{ opacity: 1 }}
-                            exit={{ opacity: 0 }}
-                            transition={{ duration: 0.3 }}
-                            onClick={() => setIsOpen(false)}
-                            style={{
-                                position: 'fixed',
-                                top: 0,
-                                left: 0,
-                                width: '100%',
-                                height: '100vh',
-                                zIndex: 9997,
-                                background: 'rgba(0,0,0,0.4)',
-                            }}
-                        />
-                        {/* Menu panel */}
-                        <motion.div
-                            initial={{ opacity: 0, y: -20 }}
+                            initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
-                            exit={{ opacity: 0, y: -20 }}
-                            transition={{ duration: 0.3 }}
-                            data-lenis-prevent
+                            transition={{ delay: sectionLinks.length * 0.04, duration: 0.3 }}
+                        >
+                            <Link
+                                to="/blog"
+                                onClick={() => setIsOpen(false)}
+                                style={{
+                                    fontSize: '1.1rem',
+                                    fontFamily: 'Outfit',
+                                    fontWeight: 700,
+                                    color: isBlogActive ? '#CFA714' : '#2C3034',
+                                    textDecoration: 'none',
+                                    textTransform: 'uppercase',
+                                    letterSpacing: '0.08em',
+                                    padding: '12px 0',
+                                    display: 'block',
+                                }}
+                            >
+                                Blog
+                            </Link>
+                        </motion.div>
+
+                        {/* Divider */}
+                        <div style={{ width: '60px', height: '2px', background: 'linear-gradient(90deg, transparent, #CFA714, transparent)', margin: '20px 0' }} />
+
+                        {/* CTA */}
+                        <motion.a
+                            href="tel:+48784565994"
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ delay: (sectionLinks.length + 1) * 0.04, duration: 0.3 }}
                             style={{
-                                position: 'fixed',
-                                top: '80px',
-                                left: '50%',
-                                transform: 'translateX(-50%)',
-                                width: '85%',
-                                maxWidth: '320px',
-                                zIndex: 9998,
-                                background: '#ffffff',
-                                borderRadius: '20px',
-                                boxShadow: '0 20px 60px rgba(0,0,0,0.15), 0 0 0 1px rgba(207, 167, 20, 0.1)',
-                                padding: '48px 32px 32px',
-                                display: 'flex',
-                                flexDirection: 'column',
-                                alignItems: 'center',
+                                background: 'linear-gradient(135deg, #CFA714, #E2C044)',
+                                color: 'white',
+                                padding: '16px 48px',
+                                borderRadius: '50px',
+                                textAlign: 'center',
+                                fontWeight: 700,
+                                textDecoration: 'none',
+                                fontSize: '1rem',
+                                boxShadow: '0 4px 20px rgba(207, 167, 20, 0.35)',
+                                letterSpacing: '0.03em',
                             }}
                         >
-                            {/* Logo sticking out above the panel */}
-                            <div style={{
-                                position: 'absolute',
-                                top: '-32px',
-                                left: '50%',
-                                transform: 'translateX(-50%)',
-                                width: '64px',
-                                height: '64px',
-                                borderRadius: '16px',
-                                background: '#ffffff',
-                                boxShadow: '0 4px 16px rgba(0,0,0,0.1)',
-                                display: 'flex',
-                                alignItems: 'center',
-                                justifyContent: 'center',
-                            }}>
-                                <img src="/dr_kangur_icon.png" alt="Logo" style={{ width: '48px', height: '48px', objectFit: 'contain' }} />
-                            </div>
-
-                            {/* Links */}
-                            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '16px', width: '100%' }}>
-                                {sectionLinks.map((link, i) => (
-                                    <motion.a
-                                        key={link.name}
-                                        href={isHome ? link.href : '/' + link.href}
-                                        onClick={(e) => {
-                                            setIsOpen(false);
-                                            if (!isHome) {
-                                                e.preventDefault();
-                                                navigate('/' + link.href);
-                                            }
-                                        }}
-                                        initial={{ opacity: 0, y: 15 }}
-                                        animate={{ opacity: 1, y: 0 }}
-                                        transition={{ delay: i * 0.03, duration: 0.25 }}
-                                        style={{
-                                            fontSize: '1.05rem',
-                                            fontFamily: 'Outfit',
-                                            fontWeight: 700,
-                                            color: '#2C3034',
-                                            textDecoration: 'none',
-                                            textTransform: 'uppercase',
-                                            letterSpacing: '0.06em',
-                                            padding: '4px 0',
-                                        }}
-                                    >
-                                        {link.name}
-                                    </motion.a>
-                                ))}
-                                <motion.div
-                                    initial={{ opacity: 0, y: 15 }}
-                                    animate={{ opacity: 1, y: 0 }}
-                                    transition={{ delay: sectionLinks.length * 0.03, duration: 0.25 }}
-                                >
-                                    <Link
-                                        to="/blog"
-                                        onClick={() => setIsOpen(false)}
-                                        style={{
-                                            fontSize: '1.05rem',
-                                            fontFamily: 'Outfit',
-                                            fontWeight: 700,
-                                            color: isBlogActive ? '#CFA714' : '#2C3034',
-                                            textDecoration: 'none',
-                                            textTransform: 'uppercase',
-                                            letterSpacing: '0.06em',
-                                            padding: '4px 0',
-                                        }}
-                                    >
-                                        Blog
-                                    </Link>
-                                </motion.div>
-
-                                {/* Divider */}
-                                <div style={{ width: '60px', height: '2px', background: 'linear-gradient(90deg, transparent, #CFA714, transparent)', margin: '8px 0' }} />
-
-                                {/* CTA */}
-                                <motion.a
-                                    href="tel:+48784565994"
-                                    initial={{ opacity: 0, y: 15 }}
-                                    animate={{ opacity: 1, y: 0 }}
-                                    transition={{ delay: (sectionLinks.length + 1) * 0.03, duration: 0.25 }}
-                                    style={{
-                                        background: 'linear-gradient(135deg, #CFA714, #E2C044)',
-                                        color: 'white',
-                                        padding: '14px 40px',
-                                        borderRadius: '12px',
-                                        textAlign: 'center',
-                                        fontWeight: 700,
-                                        textDecoration: 'none',
-                                        fontSize: '0.95rem',
-                                        boxShadow: '0 4px 16px rgba(207, 167, 20, 0.3)',
-                                        width: '100%',
-                                    }}
-                                >
-                                    Zadzwoń teraz
-                                </motion.a>
-                            </div>
-                        </motion.div>
-                    </>
+                            Zadzwoń teraz
+                        </motion.a>
+                    </motion.div>
                 )}
             </AnimatePresence>
         </>
