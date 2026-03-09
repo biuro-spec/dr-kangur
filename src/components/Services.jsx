@@ -169,8 +169,8 @@ const Services = () => {
                             key={service.title}
                             initial={{ opacity: 0, y: 30 }}
                             whileInView={{ opacity: 1, y: 0 }}
-                            transition={{ delay: i * 0.1, duration: 0.5, ease: 'easeOut' }}
-                            viewport={{ once: true, margin: '-50px' }}
+                            transition={{ delay: (i % 3) * 0.1, duration: 0.5, ease: 'easeOut' }}
+                            viewport={{ once: true, amount: 0.15 }}
                             className="card-premium"
                             onClick={() => setSelectedService(service)}
                             style={{ textAlign: 'center', cursor: 'pointer' }}

@@ -161,7 +161,7 @@ const Contact = () => {
                                     initial={{ opacity: 0, y: 15 }}
                                     whileInView={{ opacity: 1, y: 0 }}
                                     transition={{ delay: i * 0.08, duration: 0.4, ease: 'easeOut' }}
-                                    viewport={{ once: true, margin: '-30px' }}
+                                    viewport={{ once: true, amount: 0.15 }}
                                     className="contact-info-card"
                                     style={{
                                         display: 'flex',
