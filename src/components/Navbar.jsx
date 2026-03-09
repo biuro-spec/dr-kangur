@@ -196,11 +196,14 @@ const Navbar = ({ scrolled }) => {
                         data-lenis-prevent
                         style={{
                             position: 'fixed',
-                            inset: 0,
-                            zIndex: 998,
-                            background: 'rgba(255, 255, 255, 0.92)',
-                            backdropFilter: 'blur(24px) saturate(180%)',
-                            WebkitBackdropFilter: 'blur(24px) saturate(180%)',
+                            top: 0,
+                            left: 0,
+                            right: 0,
+                            bottom: 0,
+                            zIndex: 9999,
+                            background: 'rgba(255, 255, 255, 0.97)',
+                            backdropFilter: 'blur(30px) saturate(180%)',
+                            WebkitBackdropFilter: 'blur(30px) saturate(180%)',
                             display: 'flex',
                             flexDirection: 'column',
                             alignItems: 'center',
@@ -219,17 +222,16 @@ const Navbar = ({ scrolled }) => {
                                 background: 'none',
                                 cursor: 'pointer',
                                 color: '#2C3034',
-                                zIndex: 1001,
                             }}
                         >
                             <X size={32} />
                         </button>
 
                         {/* Logo */}
-                        <img src="/dr_kangur_logo.png" alt="Logo" style={{ width: '80px', marginBottom: '40px' }} />
+                        <img src="/dr_kangur_icon.png" alt="Logo" style={{ width: '56px', marginBottom: '32px' }} />
 
                         {/* Links */}
-                        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '20px' }}>
+                        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '18px' }}>
                             {sectionLinks.map((link, i) => (
                                 <motion.a
                                     key={link.name}
@@ -241,38 +243,38 @@ const Navbar = ({ scrolled }) => {
                                             navigate('/' + link.href);
                                         }
                                     }}
-                                    initial={{ opacity: 0, y: 20 }}
+                                    initial={{ opacity: 0, y: 15 }}
                                     animate={{ opacity: 1, y: 0 }}
-                                    transition={{ delay: i * 0.05, duration: 0.3 }}
+                                    transition={{ delay: i * 0.04, duration: 0.3 }}
                                     style={{
-                                        fontSize: '1.3rem',
+                                        fontSize: '1.2rem',
                                         fontFamily: 'Outfit',
                                         fontWeight: 700,
                                         color: '#2C3034',
                                         textDecoration: 'none',
                                         textTransform: 'uppercase',
-                                        letterSpacing: '0.04em',
+                                        letterSpacing: '0.05em',
                                     }}
                                 >
                                     {link.name}
                                 </motion.a>
                             ))}
                             <motion.div
-                                initial={{ opacity: 0, y: 20 }}
+                                initial={{ opacity: 0, y: 15 }}
                                 animate={{ opacity: 1, y: 0 }}
-                                transition={{ delay: sectionLinks.length * 0.05, duration: 0.3 }}
+                                transition={{ delay: sectionLinks.length * 0.04, duration: 0.3 }}
                             >
                                 <Link
                                     to="/blog"
                                     onClick={() => setIsOpen(false)}
                                     style={{
-                                        fontSize: '1.3rem',
+                                        fontSize: '1.2rem',
                                         fontFamily: 'Outfit',
                                         fontWeight: 700,
                                         color: isBlogActive ? '#CFA714' : '#2C3034',
                                         textDecoration: 'none',
                                         textTransform: 'uppercase',
-                                        letterSpacing: '0.04em',
+                                        letterSpacing: '0.05em',
                                     }}
                                 >
                                     Blog
@@ -282,11 +284,11 @@ const Navbar = ({ scrolled }) => {
                             {/* CTA */}
                             <motion.a
                                 href="tel:+48784565994"
-                                initial={{ opacity: 0, y: 20 }}
+                                initial={{ opacity: 0, y: 15 }}
                                 animate={{ opacity: 1, y: 0 }}
-                                transition={{ delay: (sectionLinks.length + 1) * 0.05, duration: 0.3 }}
+                                transition={{ delay: (sectionLinks.length + 1) * 0.04, duration: 0.3 }}
                                 style={{
-                                    marginTop: '24px',
+                                    marginTop: '20px',
                                     background: 'linear-gradient(135deg, #CFA714, #E2C044)',
                                     color: 'white',
                                     padding: '16px 48px',
@@ -294,7 +296,7 @@ const Navbar = ({ scrolled }) => {
                                     textAlign: 'center',
                                     fontWeight: 700,
                                     textDecoration: 'none',
-                                    fontSize: '1.1rem',
+                                    fontSize: '1.05rem',
                                     boxShadow: '0 4px 16px rgba(207, 167, 20, 0.3)',
                                 }}
                             >
