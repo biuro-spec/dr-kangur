@@ -100,7 +100,7 @@ const Navbar = ({ scrolled }) => {
                     }}>
                         {/* Full logo with text — visible at top */}
                         <img
-                            src="/dr_kangur_logo.png"
+                            src="/dr_kangur_logo.webp"
                             alt="Dr Kangur"
                             style={{
                                 position: 'absolute',
@@ -118,7 +118,7 @@ const Navbar = ({ scrolled }) => {
                         />
                         {/* Icon only — visible when scrolled */}
                         <img
-                            src="/dr_kangur_icon.png"
+                            src="/dr_kangur_icon.webp"
                             alt="Dr Kangur"
                             style={{
                                 position: 'absolute',
@@ -180,9 +180,9 @@ const Navbar = ({ scrolled }) => {
 
                     {/* CTA Button (Desktop) */}
                     <div style={{ display: windowWidth >= 1024 ? 'flex' : 'none', alignItems: 'center' }}>
-                        <a href="tel:+48784565994" className="btn-premium" style={{ padding: '11px 26px', fontSize: '0.99rem' }}>
+                        <a href="tel:+48784565994" className="btn-premium" style={{ padding: '11px 26px', fontSize: '0.95rem' }}>
                             <Phone size={15} />
-                            <span>Zadzwoń</span>
+                            <span>784 565 994</span>
                         </a>
                     </div>
 
@@ -312,7 +312,7 @@ const Navbar = ({ scrolled }) => {
                         </motion.button>
 
                         {/* Logo */}
-                        <img src="/dr_kangur_icon.png" alt="Logo" style={{ width: '56px', height: '56px', objectFit: 'contain', marginBottom: '32px' }} />
+                        <img src="/dr_kangur_icon.webp" alt="Logo" style={{ width: '56px', height: '56px', objectFit: 'contain', marginBottom: '32px' }} />
 
                         {/* Links */}
                         {sectionLinks.map((link, i) => (

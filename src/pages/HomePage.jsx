@@ -38,8 +38,9 @@ const HomePage = () => {
 
     return (
         <div className="min-h-screen">
+            <a href="#main-content" className="skip-nav">Przejdź do treści</a>
             <Navbar scrolled={scrolled} />
-            <main>
+            <main id="main-content">
                 <Hero />
                 <Stats />
                 <About />

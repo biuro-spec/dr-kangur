@@ -141,7 +141,7 @@ const Contact = () => {
                     </p>
                 </motion.div>
 
-                <div style={{
+                <div className="contact-grid" style={{
                     display: 'grid',
                     gridTemplateColumns: '1fr 1fr',
                     gap: '64px',
@@ -232,6 +232,8 @@ const Contact = () => {
                                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1251.4!2d17.820373!3d50.203626!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471139e4b0d1d1bd%3A0x6c1db83da88fbf84!2sDR+KANGUR+Rehabilitacja!5e0!3m2!1spl!2spl!4v1700000000000!5m2!1spl!2spl"
                                 width="100%" height="100%" style={{ border: 0 }} allowFullScreen="" loading="lazy"
                                 title="Mapa DR KANGUR"
+                                sandbox="allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"
+                                referrerPolicy="no-referrer"
                             ></iframe>
                         </motion.div>
 
@@ -294,7 +296,7 @@ const Contact = () => {
 
                         <form onSubmit={handleSubmit} noValidate style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
                             {/* Name + Phone row */}
-                            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px' }}>
+                            <div className="contact-form-row" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px' }}>
                                 <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
                                     <label style={{ fontWeight: 600, color: '#2C3034', fontSize: '0.85rem' }}>Imię i Nazwisko *</label>
                                     <input
@@ -428,12 +430,21 @@ const Contact = () => {
                     box-shadow: 0 12px 35px rgba(89, 139, 188, 0.35) !important;
                 }
                 @media (max-width: 768px) {
-                    #contact > div > div:first-child {
-                        grid-template-columns: 1fr !important;
-                        gap: 40px !important;
+                    #contact {
+                        padding: 64px 0 !important;
                     }
-                    #contact form > div:first-child {
+                    #contact > div {
+                        padding: 0 16px !important;
+                    }
+                    .contact-grid {
                         grid-template-columns: 1fr !important;
+                        gap: 32px !important;
+                    }
+                    .contact-form-row {
+                        grid-template-columns: 1fr !important;
+                    }
+                    #contact h2 {
+                        font-size: 2rem !important;
                     }
                 }
             `}</style>

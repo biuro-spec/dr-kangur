@@ -4,25 +4,25 @@ import { X, ZoomIn } from 'lucide-react';
 
 const galleryItems = [
     {
-        src: '/clinic_room.jpg',
+        src: '/clinic_room.webp',
         alt: 'Gabinet fizjoterapii DR KANGUR',
         title: 'Gabinet zabiegowy',
         category: 'Wnętrze',
     },
     {
-        src: '/clinic_gym.jpg',
+        src: '/clinic_gym.webp',
         alt: 'Sala ćwiczeń DR KANGUR',
         title: 'Sala ćwiczeń',
         category: 'Wnętrze',
     },
     {
-        src: '/hero_rehab.png',
+        src: '/hero_rehab.webp',
         alt: 'Rehabilitacja DR KANGUR',
         title: 'Rehabilitacja',
         category: 'Zabiegi',
     },
     {
-        src: '/hero_premium.png',
+        src: '/hero_premium.webp',
         alt: 'Premium fizjoterapia',
         title: 'Fizjoterapia premium',
         category: 'Zabiegi',

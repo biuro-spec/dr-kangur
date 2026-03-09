@@ -99,7 +99,8 @@ const Hero = () => {
                             maxHeight: '520px',
                         }}>
                             <img
-                                src="/clinic_room.jpg"
+                                src="/clinic_room.webp"
+                                loading="eager"
                                 alt="Gabinet Fizjoterapii Dr Kangur"
                                 style={{
                                     width: '100%',

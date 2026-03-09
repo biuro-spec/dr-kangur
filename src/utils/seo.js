@@ -1,6 +1,8 @@
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 
+const SITE_URL = 'https://drkangur.pl';
+
 const updateMetaTag = (name, content, attr = 'name') => {
     let element = document.querySelector(`meta[${attr}="${name}"]`);
     if (!element) {
@@ -11,55 +13,124 @@ const updateMetaTag = (name, content, attr = 'name') => {
     element.setAttribute('content', content);
 };
 
-export const updateMetaTags = ({ title, description, keywords, slug, type = 'website' }) => {
+const updateCanonical = (url) => {
+    let link = document.querySelector('link[rel="canonical"]');
+    if (!link) {
+        link = document.createElement('link');
+        link.setAttribute('rel', 'canonical');
+        document.head.appendChild(link);
+    }
+    link.setAttribute('href', url);
+};
+
+export const updateMetaTags = ({ title, description, keywords, slug, type = 'website', path }) => {
+    const url = slug ? `${SITE_URL}/blog/${slug}` : path ? `${SITE_URL}${path}` : SITE_URL;
+
     document.title = title;
     if (description) updateMetaTag('description', description);
     if (keywords) updateMetaTag('keywords', keywords);
 
+    // Open Graph
     updateMetaTag('og:title', title, 'property');
     if (description) updateMetaTag('og:description', description, 'property');
     updateMetaTag('og:type', type, 'property');
-    if (slug) updateMetaTag('og:url', `https://drkangur.pl/blog/${slug}`, 'property');
+    updateMetaTag('og:url', url, 'property');
+
+    // Twitter Card
+    updateMetaTag('twitter:card', 'summary_large_image');
+    updateMetaTag('twitter:title', title);
+    if (description) updateMetaTag('twitter:description', description);
+    updateMetaTag('twitter:image', `${SITE_URL}/dr_kangur_logo.webp`);
+
+    // Canonical
+    updateCanonical(url);
 };
 
 export const resetMetaTags = () => {
     document.title = 'DR KANGUR | Rehabilitacja i Fizjoterapia Głubczyce';
-    updateMetaTag('description', 'DR KANGUR - Profesjonalna rehabilitacja i fizjoterapia w Głubczycach. NFZ i prywatnie. Powrót do sprawności po urazach i operacjach.');
+    const desc = 'DR KANGUR - Profesjonalna rehabilitacja i fizjoterapia w Głubczycach. NFZ i prywatnie. Powrót do sprawności po urazach i operacjach.';
+    updateMetaTag('description', desc);
     updateMetaTag('og:title', 'DR KANGUR | Rehabilitacja i Fizjoterapia Głubczyce', 'property');
+    updateMetaTag('og:description', desc, 'property');
     updateMetaTag('og:type', 'website', 'property');
+    updateMetaTag('og:url', SITE_URL, 'property');
+
+    // Twitter Card
+    updateMetaTag('twitter:card', 'summary_large_image');
+    updateMetaTag('twitter:title', 'DR KANGUR | Rehabilitacja i Fizjoterapia Głubczyce');
+    updateMetaTag('twitter:description', desc);
+    updateMetaTag('twitter:image', `${SITE_URL}/dr_kangur_logo.webp`);
+
+    // Canonical
+    updateCanonical(SITE_URL);
 };
 
-export const generateArticleSchema = (article) => ({
-    "@context": "https://schema.org",
-    "@type": "MedicalWebPage",
-    "headline": article.title,
-    "description": article.metaDescription,
-    "datePublished": article.publishDate,
-    "author": { "@type": "Organization", "name": "DR KANGUR Rehabilitacja i Fizjoterapia" },
-    "publisher": {
-        "@type": "Organization",
-        "name": "DR KANGUR Rehabilitacja i Fizjoterapia",
-        "logo": { "@type": "ImageObject", "url": "https://drkangur.pl/dr_kangur_logo.png" }
+export const generateArticleSchema = (article) => ([
+    {
+        "@context": "https://schema.org",
+        "@type": "MedicalWebPage",
+        "headline": article.title,
+        "description": article.metaDescription,
+        "datePublished": article.publishDate,
+        "author": { "@type": "Organization", "name": "DR KANGUR Rehabilitacja i Fizjoterapia" },
+        "publisher": {
+            "@type": "Organization",
+            "name": "DR KANGUR Rehabilitacja i Fizjoterapia",
+            "logo": { "@type": "ImageObject", "url": `${SITE_URL}/dr_kangur_logo.webp` }
+        },
+        "mainEntityOfPage": { "@type": "WebPage", "@id": `${SITE_URL}/blog/${article.slug}` },
+        "keywords": article.keywords.join(', '),
+        "specialty": "Rehabilitation Medicine"
     },
-    "mainEntityOfPage": { "@type": "WebPage", "@id": `https://drkangur.pl/blog/${article.slug}` },
-    "keywords": article.keywords.join(', '),
-    "specialty": "Rehabilitation Medicine"
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": article.title,
+        "description": article.metaDescription,
+        "image": article.image ? `${SITE_URL}${article.image}` : `${SITE_URL}/dr_kangur_logo.webp`,
+        "datePublished": article.publishDate,
+        "dateModified": article.publishDate,
+        "author": { "@type": "Organization", "name": "DR KANGUR Rehabilitacja i Fizjoterapia" },
+        "publisher": {
+            "@type": "Organization",
+            "name": "DR KANGUR Rehabilitacja i Fizjoterapia",
+            "logo": { "@type": "ImageObject", "url": `${SITE_URL}/dr_kangur_logo.webp` }
+        },
+        "mainEntityOfPage": { "@type": "WebPage", "@id": `${SITE_URL}/blog/${article.slug}` },
+        "keywords": article.keywords.join(', '),
+        "wordCount": article.readTime * 200,
+        "inLanguage": "pl-PL"
+    }
+]);
+
+export const generateFAQSchema = (faqs) => ({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqs.map(faq => ({
+        "@type": "Question",
+        "name": faq.question,
+        "acceptedAnswer": {
+            "@type": "Answer",
+            "text": faq.answer,
+        },
+    })),
 });
 
-export const injectSchema = (schema) => {
-    let script = document.getElementById('article-schema');
-    if (!script) {
-        script = document.createElement('script');
-        script.id = 'article-schema';
+export const injectSchema = (schemas) => {
+    // Remove old schemas first
+    removeSchema();
+    const items = Array.isArray(schemas) ? schemas : [schemas];
+    items.forEach((schema, i) => {
+        const script = document.createElement('script');
+        script.className = 'article-schema';
         script.type = 'application/ld+json';
+        script.textContent = JSON.stringify(schema);
         document.head.appendChild(script);
-    }
-    script.textContent = JSON.stringify(schema);
+    });
 };
 
 export const removeSchema = () => {
-    const script = document.getElementById('article-schema');
-    if (script) script.remove();
+    document.querySelectorAll('.article-schema').forEach(el => el.remove());
 };
 
 export const useScrollToTop = () => {

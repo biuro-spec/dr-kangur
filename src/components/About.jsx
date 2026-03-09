@@ -59,7 +59,8 @@ const About = () => {
                             zIndex: 2,
                         }}>
                             <img
-                                src="/clinic_gym.jpg"
+                                src="/clinic_gym.webp"
+                                loading="lazy"
                                 alt="Sala ćwiczeń Dr Kangur"
                                 style={{
                                     width: '100%',

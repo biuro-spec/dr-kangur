@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, Phone, MapPin, CheckCircle, ArrowRight } from 'lucide-react';
+import DOMPurify from 'dompurify';
 import { serviceIllustrations } from '../data/serviceIllustrations';
 
 const ModalContent = ({ service, onClose, contentRef }) => {
@@ -37,7 +38,7 @@ const ModalContent = ({ service, onClose, contentRef }) => {
                             fontSize: '0.95rem',
                             marginBottom: '16px',
                         }}
-                        dangerouslySetInnerHTML={{ __html: block.text }}
+                        dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(block.text, { ALLOWED_TAGS: ['strong', 'em', 'br'], ALLOWED_ATTR: [] }) }}
                     />
                 );
             case 'list':
@@ -179,7 +180,7 @@ const ModalContent = ({ service, onClose, contentRef }) => {
                                 height: '220px',
                                 pointerEvents: 'none',
                             }}
-                            dangerouslySetInnerHTML={{ __html: illustration }}
+                            dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(illustration, { USE_PROFILES: { svg: true }, ADD_TAGS: ['use'], ALLOWED_ATTR: ['viewBox', 'fill', 'stroke', 'stroke-width', 'stroke-linecap', 'stroke-linejoin', 'd', 'cx', 'cy', 'r', 'rx', 'ry', 'x', 'y', 'width', 'height', 'xmlns', 'opacity', 'transform'] }) }}
                         />
                     )}
 

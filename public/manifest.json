@@ -1,0 +1,21 @@
+{
+    "name": "DR KANGUR Rehabilitacja i Fizjoterapia",
+    "short_name": "DR KANGUR",
+    "description": "Profesjonalna rehabilitacja i fizjoterapia w Głubczycach. NFZ i prywatnie.",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#CFA714",
+    "icons": [
+        {
+            "src": "/dr_kangur_icon.webp",
+            "sizes": "192x192",
+            "type": "image/webp"
+        },
+        {
+            "src": "/dr_kangur_logo.webp",
+            "sizes": "512x512",
+            "type": "image/webp"
+        }
+    ]
+}

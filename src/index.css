@@ -30,6 +30,24 @@ html {
     scroll-padding-top: 80px;
 }
 
+.skip-nav {
+    position: absolute;
+    top: -100%;
+    left: 16px;
+    z-index: 10000;
+    background: #CFA714;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 0 0 8px 8px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: top 0.2s;
+}
+
+.skip-nav:focus {
+    top: 0;
+}
+
 *,
 *::before,
 *::after {

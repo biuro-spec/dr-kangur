@@ -154,7 +154,7 @@ const Footer = () => {
                         <div>
                             <div style={{ display: 'flex', alignItems: 'center', gap: '14px', marginBottom: '20px' }}>
                                 <img
-                                    src="/dr_kangur_icon.png"
+                                    src="/dr_kangur_icon.webp"
                                     alt="Dr Kangur"
                                     style={{
                                         width: '56px',
@@ -409,7 +409,7 @@ const Footer = () => {
                 </div>
 
                 {/* Bottom bar */}
-                <div style={{
+                <div className="footer-bottom-bar" style={{
                     background: 'rgba(0,0,0,0.25)',
                     borderTop: '1px solid rgba(255,255,255,0.05)',
                     padding: '20px 0',
@@ -431,12 +431,15 @@ const Footer = () => {
                             &copy; {new Date().getFullYear()} DR KANGUR Rehabilitacja i Fizjoterapia
                         </p>
 
-                        <div style={{
+                        <div className="footer-credit" style={{
                             display: 'flex',
                             alignItems: 'center',
+                            justifyContent: 'center',
+                            flexWrap: 'wrap',
                             gap: '6px',
                             fontSize: '0.8rem',
                             color: 'rgba(255,255,255,0.45)',
+                            textAlign: 'center',
                         }}>
                             <Code size={14} style={{ opacity: 0.6 }} />
                             <span>Napisane kodem z najnowszymi technologiami przez</span>
@@ -493,6 +496,13 @@ const Footer = () => {
                         padding: 28px 24px !important;
                         flex-direction: column !important;
                         text-align: center !important;
+                    }
+                    .footer-bottom-bar {
+                        padding: 20px 16px 100px !important;
+                    }
+                    .footer-credit {
+                        flex-direction: column !important;
+                        gap: 4px !important;
                     }
                 }
             `}</style>

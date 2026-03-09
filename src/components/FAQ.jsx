@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronDown } from 'lucide-react';
+import { generateFAQSchema, injectSchema, removeSchema } from '../utils/seo';
 
 const faqs = [
     {
@@ -51,6 +52,7 @@ const FAQItem = ({ faq, isOpen, onClick }) => {
         >
             <button
                 onClick={onClick}
+                aria-expanded={isOpen}
                 style={{
                     width: '100%',
                     padding: '24px 32px',
@@ -95,6 +97,22 @@ const FAQItem = ({ faq, isOpen, onClick }) => {
 
 const FAQ = () => {
     const [openIndex, setOpenIndex] = useState(null);
+
+    useEffect(() => {
+        const schemaId = 'faq-schema';
+        let script = document.getElementById(schemaId);
+        if (!script) {
+            script = document.createElement('script');
+            script.id = schemaId;
+            script.type = 'application/ld+json';
+            document.head.appendChild(script);
+        }
+        script.textContent = JSON.stringify(generateFAQSchema(faqs));
+        return () => {
+            const el = document.getElementById(schemaId);
+            if (el) el.remove();
+        };
+    }, []);
 
     return (
         <section id="faq" style={{ padding: '96px 0', background: '#f8f9fa' }}>
