@@ -149,18 +149,18 @@ const Contact = () => {
                 }}>
                     {/* Left column - Contact info */}
                     <motion.div
-                        initial={{ opacity: 0, x: -30 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.7 }}
+                        initial={{ opacity: 0, y: 15 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5 }}
                         viewport={{ once: true }}
                     >
                         <div style={{ display: 'flex', flexDirection: 'column', gap: '16px', marginBottom: '32px' }}>
                             {contactItems.map((item, i) => (
                                 <motion.div
                                     key={item.title}
-                                    initial={{ opacity: 0, y: 15 }}
+                                    initial={{ opacity: 0, y: 10 }}
                                     whileInView={{ opacity: 1, y: 0 }}
-                                    transition={{ delay: i * 0.08, duration: 0.4, ease: 'easeOut' }}
+                                    transition={{ delay: i * 0.06, duration: 0.4, ease: 'easeOut' }}
                                     viewport={{ once: true, amount: 0.15 }}
                                     className="contact-info-card"
                                     style={{
@@ -267,9 +267,9 @@ const Contact = () => {
 
                     {/* Right column - Form */}
                     <motion.div
-                        initial={{ opacity: 0, x: 30 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.7, delay: 0.1 }}
+                        initial={{ opacity: 0, y: 15 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5, delay: 0.1 }}
                         viewport={{ once: true }}
                         style={{
                             background: 'linear-gradient(145deg, rgba(89, 139, 188, 0.06) 0%, rgba(59, 108, 181, 0.1) 100%)',

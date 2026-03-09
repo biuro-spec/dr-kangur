@@ -57,9 +57,9 @@ const Testimonials = () => {
     const t = testimonials[current];
 
     const variants = {
-        enter: (dir) => ({ x: dir > 0 ? 80 : -80, opacity: 0 }),
+        enter: (dir) => ({ x: dir > 0 ? 30 : -30, opacity: 0 }),
         center: { x: 0, opacity: 1 },
-        exit: (dir) => ({ x: dir > 0 ? -80 : 80, opacity: 0 }),
+        exit: (dir) => ({ x: dir > 0 ? -30 : 30, opacity: 0 }),
     };
 
     return (

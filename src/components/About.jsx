@@ -45,9 +45,9 @@ const About = () => {
                 }}>
                     {/* Image column */}
                     <motion.div
-                        initial={{ opacity: 0, x: -40 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.7, ease: 'easeOut' }}
+                        initial={{ opacity: 0, y: 15 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5, ease: 'easeOut' }}
                         viewport={{ once: true }}
                         style={{ position: 'relative' }}
                     >
@@ -147,9 +147,9 @@ const About = () => {
 
                     {/* Text column */}
                     <motion.div
-                        initial={{ opacity: 0, x: 40 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.7, ease: 'easeOut' }}
+                        initial={{ opacity: 0, y: 15 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5, ease: 'easeOut' }}
                         viewport={{ once: true }}
                     >
                         <span style={{
@@ -190,9 +190,9 @@ const About = () => {
                             {points.map((point, i) => (
                                 <motion.div
                                     key={point}
-                                    initial={{ opacity: 0, x: 20 }}
-                                    whileInView={{ opacity: 1, x: 0 }}
-                                    transition={{ delay: i * 0.08, duration: 0.4, ease: 'easeOut' }}
+                                    initial={{ opacity: 0, y: 10 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    transition={{ delay: i * 0.06, duration: 0.3, ease: 'easeOut' }}
                                     viewport={{ once: true, amount: 0.15 }}
                                     style={{
                                         display: 'flex',

@@ -133,9 +133,9 @@ const FAQ = () => {
                     {faqs.map((faq, i) => (
                         <motion.div
                             key={i}
-                            initial={{ opacity: 0, y: 20 }}
+                            initial={{ opacity: 0, y: 12 }}
                             whileInView={{ opacity: 1, y: 0 }}
-                            transition={{ delay: i * 0.05, duration: 0.4, ease: 'easeOut' }}
+                            transition={{ delay: i * 0.04, duration: 0.3, ease: 'easeOut' }}
                             viewport={{ once: true, amount: 0.15 }}
                         >
                             <FAQItem

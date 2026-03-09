@@ -115,9 +115,9 @@ const Rental = () => {
                             {rentalItems.map((item, i) => (
                                 <motion.div
                                     key={item.title}
-                                    initial={{ opacity: 0, y: 30 }}
+                                    initial={{ opacity: 0, y: 15 }}
                                     whileInView={{ opacity: 1, y: 0 }}
-                                    transition={{ delay: (i % 2) * 0.1, duration: 0.5, ease: 'easeOut' }}
+                                    transition={{ delay: (i % 2) * 0.08, duration: 0.4, ease: 'easeOut' }}
                                     viewport={{ once: true, amount: 0.15 }}
                                     style={{
                                         background: 'rgba(255,255,255,0.05)',
