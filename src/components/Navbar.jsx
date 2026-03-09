@@ -67,11 +67,11 @@ const Navbar = ({ scrolled }) => {
                     height: '70px',
                     display: 'flex',
                     alignItems: 'center',
-                    background: (scrolled || windowWidth < 1024) ? 'rgba(255, 255, 255, 0.85)' : 'transparent',
-                    backdropFilter: (scrolled || windowWidth < 1024) ? 'blur(20px) saturate(180%)' : 'none',
-                    WebkitBackdropFilter: (scrolled || windowWidth < 1024) ? 'blur(20px) saturate(180%)' : 'none',
-                    borderBottom: (scrolled || windowWidth < 1024) ? '1px solid rgba(207, 167, 20, 0.1)' : 'none',
-                    boxShadow: (scrolled || windowWidth < 1024) ? '0 4px 20px rgba(0,0,0,0.06)' : 'none',
+                    background: scrolled ? 'rgba(255, 255, 255, 0.85)' : 'transparent',
+                    backdropFilter: scrolled ? 'blur(20px) saturate(180%)' : 'none',
+                    WebkitBackdropFilter: scrolled ? 'blur(20px) saturate(180%)' : 'none',
+                    borderBottom: scrolled ? '1px solid rgba(207, 167, 20, 0.1)' : 'none',
+                    boxShadow: scrolled ? '0 4px 20px rgba(0,0,0,0.06)' : 'none',
                     transition: 'all 0.5s cubic-bezier(0.16, 1, 0.3, 1)',
                 }}
             >
@@ -91,13 +91,13 @@ const Navbar = ({ scrolled }) => {
                         position: 'relative',
                         zIndex: 1001,
                         alignSelf: 'flex-start',
-                        marginTop: scrolled ? '6px' : (windowWidth < 1024 ? '12px' : '104px'),
-                        width: scrolled ? '52px' : (windowWidth < 1024 ? '52px' : '132px'),
-                        height: scrolled ? '52px' : (windowWidth < 1024 ? '52px' : '160px'),
+                        marginTop: scrolled ? '6px' : (windowWidth < 1024 ? '10px' : '104px'),
+                        width: scrolled ? '52px' : (windowWidth < 1024 ? '80px' : '132px'),
+                        height: scrolled ? '52px' : (windowWidth < 1024 ? '100px' : '160px'),
                         transition: 'all 0.6s cubic-bezier(0.16, 1, 0.3, 1)',
                         flexShrink: 0,
                     }}>
-                        {/* Full logo with text — visible at top (desktop only) */}
+                        {/* Full logo with text — visible at top */}
                         <img
                             src="/dr_kangur_logo.png"
                             alt="Dr Kangur"
@@ -109,13 +109,13 @@ const Navbar = ({ scrolled }) => {
                                 height: '100%',
                                 objectFit: 'contain',
                                 objectPosition: 'top left',
-                                opacity: (scrolled || windowWidth < 1024) ? 0 : 1,
-                                transform: (scrolled || windowWidth < 1024) ? 'scale(0.4) rotate(-8deg)' : 'scale(1) rotate(0deg)',
+                                opacity: scrolled ? 0 : 1,
+                                transform: scrolled ? 'scale(0.4) rotate(-8deg)' : 'scale(1) rotate(0deg)',
                                 transition: 'all 0.6s cubic-bezier(0.16, 1, 0.3, 1)',
                                 filter: 'drop-shadow(0 4px 12px rgba(0,0,0,0.1))',
                             }}
                         />
-                        {/* Icon only — visible when scrolled or on mobile */}
+                        {/* Icon only — visible when scrolled */}
                         <img
                             src="/dr_kangur_icon.png"
                             alt="Dr Kangur"
@@ -127,8 +127,8 @@ const Navbar = ({ scrolled }) => {
                                 height: '100%',
                                 objectFit: 'contain',
                                 objectPosition: 'top left',
-                                opacity: (scrolled || windowWidth < 1024) ? 1 : 0,
-                                transform: (scrolled || windowWidth < 1024) ? 'scale(1) rotate(0deg)' : 'scale(2) rotate(8deg)',
+                                opacity: scrolled ? 1 : 0,
+                                transform: scrolled ? 'scale(1) rotate(0deg)' : 'scale(2) rotate(8deg)',
                                 transition: 'all 0.6s cubic-bezier(0.16, 1, 0.3, 1)',
                                 filter: 'drop-shadow(0 4px 12px rgba(0,0,0,0.1))',
                             }}
