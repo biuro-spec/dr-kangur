@@ -40,7 +40,7 @@ export const updateMetaTags = ({ title, description, keywords, slug, type = 'web
     updateMetaTag('twitter:card', 'summary_large_image');
     updateMetaTag('twitter:title', title);
     if (description) updateMetaTag('twitter:description', description);
-    updateMetaTag('twitter:image', `${SITE_URL}/dr_kangur_logo.webp`);
+    updateMetaTag('twitter:image', `${SITE_URL}/og-image.png`);
 
     // Canonical
     updateCanonical(url);
@@ -59,7 +59,7 @@ export const resetMetaTags = () => {
     updateMetaTag('twitter:card', 'summary_large_image');
     updateMetaTag('twitter:title', 'DR KANGUR | Rehabilitacja i Fizjoterapia Głubczyce');
     updateMetaTag('twitter:description', desc);
-    updateMetaTag('twitter:image', `${SITE_URL}/dr_kangur_logo.webp`);
+    updateMetaTag('twitter:image', `${SITE_URL}/og-image.png`);
 
     // Canonical
     updateCanonical(SITE_URL);
