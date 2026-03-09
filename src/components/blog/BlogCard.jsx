@@ -10,10 +10,10 @@ const BlogCard = ({ article, index }) => {
 
     return (
         <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.15 }}
-            transition={{ duration: 0.5, delay: (index % 3) * 0.1 }}
+            transition={{ duration: 0.4, delay: (index % 3) * 0.08 }}
         >
             <Link
                 to={`/blog/${article.slug}`}

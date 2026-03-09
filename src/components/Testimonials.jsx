@@ -57,9 +57,9 @@ const Testimonials = () => {
     const t = testimonials[current];
 
     const variants = {
-        enter: (dir) => ({ x: dir > 0 ? 30 : -30, opacity: 0 }),
-        center: { x: 0, opacity: 1 },
-        exit: (dir) => ({ x: dir > 0 ? -30 : 30, opacity: 0 }),
+        enter: { opacity: 0 },
+        center: { opacity: 1 },
+        exit: { opacity: 0 },
     };
 
     return (
@@ -111,10 +111,9 @@ const Testimonials = () => {
                         overflow: 'hidden',
                         position: 'relative',
                     }}>
-                        <AnimatePresence mode="wait" custom={direction}>
+                        <AnimatePresence mode="wait">
                             <motion.div
                                 key={current}
-                                custom={direction}
                                 variants={variants}
                                 initial="enter"
                                 animate="center"

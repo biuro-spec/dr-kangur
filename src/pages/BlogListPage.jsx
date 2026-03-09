@@ -65,9 +65,9 @@ const BlogListPage = () => {
 
                 <div className="container" style={{ maxWidth: '1300px', margin: '0 auto', padding: '0 32px', position: 'relative', zIndex: 1 }}>
                     <motion.div
-                        initial={{ opacity: 0, y: 30 }}
+                        initial={{ opacity: 0, y: 15 }}
                         animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.6 }}
+                        transition={{ duration: 0.4 }}
                         style={{ textAlign: 'center', maxWidth: '700px', margin: '0 auto' }}
                     >
                         <div style={{

@@ -124,9 +124,9 @@ const Contact = () => {
             <div style={{ maxWidth: '1300px', margin: '0 auto', padding: '0 32px', position: 'relative', zIndex: 2 }}>
                 {/* Section header */}
                 <motion.div
-                    initial={{ opacity: 0, y: 20 }}
+                    initial={{ opacity: 0, y: 12 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6 }}
+                    transition={{ duration: 0.4 }}
                     viewport={{ once: true }}
                     style={{ textAlign: 'center', marginBottom: '64px' }}
                 >
@@ -216,9 +216,9 @@ const Contact = () => {
 
                         {/* Google Map */}
                         <motion.div
-                            initial={{ opacity: 0, y: 20 }}
+                            initial={{ opacity: 0, y: 12 }}
                             whileInView={{ opacity: 1, y: 0 }}
-                            transition={{ delay: 0.2, duration: 0.6 }}
+                            transition={{ delay: 0.1, duration: 0.4 }}
                             viewport={{ once: true }}
                             style={{
                                 borderRadius: '24px',
