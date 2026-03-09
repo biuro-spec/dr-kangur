@@ -419,10 +419,9 @@ const Footer = () => {
                         margin: '0 auto',
                         padding: '0 32px',
                         display: 'flex',
-                        justifyContent: 'space-between',
+                        flexDirection: 'column',
                         alignItems: 'center',
-                        flexWrap: 'wrap',
-                        gap: '12px',
+                        gap: '8px',
                     }}>
                         <p style={{
                             color: 'rgba(255,255,255,0.6)',
@@ -459,7 +458,7 @@ const Footer = () => {
                                     letterSpacing: '-0.5px',
                                     fontSize: '0.85rem',
                                 }}>
-                                    &lt;WebStudio<span style={{ color: '#8ec5fc' }}>47</span>&gt;
+                                    &lt;WebStudio<span style={{ color: '#4A90D9' }}>47</span>&gt;
                                 </span>
                             </a>
                         </div>
@@ -473,7 +472,7 @@ const Footer = () => {
                     transition: all 0.3s ease;
                 }
                 a:hover .webstudio-brand {
-                    text-shadow: 0 0 15px rgba(142, 197, 252, 0.5);
+                    text-shadow: 0 0 15px rgba(74, 144, 217, 0.5);
                 }
                 @media (max-width: 1024px) {
                     footer [style*="grid-template-columns: 2fr 1fr 1fr 1fr"] {
