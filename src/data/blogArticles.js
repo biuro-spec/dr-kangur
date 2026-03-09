@@ -20,6 +20,7 @@ export const blogArticles = [
         readTime: 8,
         gradient: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
         icon: 'Activity',
+        image: '/blog/blog-1.png',
         excerpt: 'Zerwanie więzadła krzyżowego przedniego to jeden z najpoważniejszych urazów kolana. Poznaj etapy rehabilitacji i sprawdzone metody powrotu do formy.',
         content: [
             { type: 'heading', text: 'Czym jest więzadło krzyżowe przednie (ACL)?' },
@@ -71,6 +72,7 @@ export const blogArticles = [
         readTime: 7,
         gradient: 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)',
         icon: 'Bone',
+        image: '/blog/blog-2.png',
         excerpt: 'Ból kręgosłupa lędźwiowego dotyka nawet 80% dorosłych. Poznaj najskuteczniejsze metody leczenia i profilaktyki bólu dolnych pleców.',
         content: [
             { type: 'heading', text: 'Dlaczego boli kręgosłup lędźwiowy?' },
@@ -126,6 +128,7 @@ export const blogArticles = [
         readTime: 9,
         gradient: 'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)',
         icon: 'Heart',
+        image: '/blog/blog-3.png',
         excerpt: 'Endoprotezoplastyka stawu kolanowego wymaga starannej rehabilitacji. Poznaj etapy, ćwiczenia i wskazówki, jak wrócić do aktywnego życia.',
         content: [
             { type: 'heading', text: 'Kiedy konieczna jest endoproteza kolana?' },
@@ -174,6 +177,7 @@ export const blogArticles = [
         readTime: 6,
         gradient: 'linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%)',
         icon: 'Hand',
+        image: '/blog/blog-4.png',
         excerpt: 'Masaż tkanek głębokich to technika terapeutyczna sięgająca głębokich warstw mięśni. Dowiedz się, kiedy jest wskazany i jakich efektów oczekiwać.',
         content: [
             { type: 'heading', text: 'Czym jest masaż tkanek głębokich?' },
@@ -220,6 +224,7 @@ export const blogArticles = [
         readTime: 6,
         gradient: 'linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%)',
         icon: 'Zap',
+        image: '/blog/blog-5.png',
         excerpt: 'Łokieć tenisisty to nie tylko problem sportowców. Dowiedz się, dlaczego powstaje, jak go rozpoznać i jakie metody leczenia są najskuteczniejsze.',
         content: [
             { type: 'heading', text: 'Co to jest łokieć tenisisty?' },
@@ -265,6 +270,7 @@ export const blogArticles = [
         readTime: 7,
         gradient: 'linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)',
         icon: 'Zap',
+        image: '/blog/blog-6.png',
         excerpt: 'Ostroga piętowa powoduje silny ból uniemożliwiający normalne chodzenie. Fala uderzeniowa jest jedną z najskuteczniejszych metod jej leczenia.',
         content: [
             { type: 'heading', text: 'Czym jest ostroga piętowa?' },
@@ -315,6 +321,7 @@ export const blogArticles = [
         readTime: 8,
         gradient: 'linear-gradient(135deg, #fa709a 0%, #fee140 100%)',
         icon: 'Dumbbell',
+        image: '/blog/blog-7.png',
         excerpt: 'Silne mięśnie stabilizujące to fundament zdrowego kręgosłupa. Poznaj 10 najskuteczniejszych ćwiczeń, które możesz robić w domu.',
         content: [
             { type: 'heading', text: 'Dlaczego stabilizacja kręgosłupa jest tak ważna?' },
@@ -357,6 +364,7 @@ export const blogArticles = [
         readTime: 7,
         gradient: 'linear-gradient(135deg, #89f7fe 0%, #66a6ff 100%)',
         icon: 'Footprints',
+        image: '/blog/blog-8.png',
         excerpt: 'Skręcenie stawu skokowego to najczęstszy uraz sportowy. Odpowiednia rehabilitacja jest kluczowa, aby uniknąć przewlekłej niestabilności.',
         content: [
             { type: 'heading', text: 'Stopnie skręcenia stawu skokowego' },
@@ -409,6 +417,7 @@ export const blogArticles = [
         readTime: 6,
         gradient: 'linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%)',
         icon: 'Stethoscope',
+        image: '/blog/blog-9.png',
         excerpt: 'Odpowiednie przygotowanie do operacji ortopedycznej może skrócić rehabilitację nawet o 30%. Poznaj sprawdzone strategie prehabilitation.',
         content: [
             { type: 'heading', text: 'Czym jest prehabilitation?' },
@@ -462,6 +471,7 @@ export const blogArticles = [
         readTime: 5,
         gradient: 'linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%)',
         icon: 'Bandage',
+        image: '/blog/blog-10.png',
         excerpt: 'Taping kinezjologiczny to popularna metoda wspomagania terapii. Poznaj jego realne zastosowania, mechanizmy działania i ograniczenia.',
         content: [
             { type: 'heading', text: 'Czym jest taping kinezjologiczny?' },
@@ -506,6 +516,7 @@ export const blogArticles = [
         readTime: 7,
         gradient: 'linear-gradient(135deg, #667eea 0%, #00c6fb 100%)',
         icon: 'ShieldCheck',
+        image: '/blog/blog-11.png',
         excerpt: 'Bark to jeden z najbardziej ruchomych i narażonych na urazy stawów. Poznaj najczęstsze przyczyny bólu i ćwiczenia, które przynoszą ulgę.',
         content: [
             { type: 'heading', text: 'Anatomia barku - dlaczego jest tak podatny na urazy?' },
@@ -552,6 +563,7 @@ export const blogArticles = [
         readTime: 5,
         gradient: 'linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%)',
         icon: 'Snowflake',
+        image: '/blog/blog-12.png',
         excerpt: 'Krioterapia to jedna z najstarszych i najskuteczniejszych metod fizjoterapeutycznych. Dowiedz się, jak prawidłowo stosować zimno w leczeniu i regeneracji.',
         content: [
             { type: 'heading', text: 'Czym jest krioterapia?' },

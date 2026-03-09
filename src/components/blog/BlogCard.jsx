@@ -30,47 +30,30 @@ const BlogCard = ({ article, index }) => {
                         flexDirection: 'column',
                     }}
                 >
-                    {/* Gradient Hero */}
+                    {/* Image Hero */}
                     <div style={{
-                        background: article.gradient,
                         height: '200px',
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'center',
                         position: 'relative',
                         overflow: 'hidden',
                     }}>
-                        {/* Decorative circles */}
+                        <img
+                            src={article.image}
+                            alt={article.title}
+                            style={{
+                                width: '100%',
+                                height: '100%',
+                                objectFit: 'cover',
+                                transition: 'transform 0.5s cubic-bezier(0.16, 1, 0.3, 1)',
+                            }}
+                        />
                         <div style={{
                             position: 'absolute',
-                            width: '120px',
-                            height: '120px',
-                            borderRadius: '50%',
-                            background: 'rgba(255,255,255,0.1)',
-                            top: '-30px',
-                            right: '-20px',
+                            bottom: 0,
+                            left: 0,
+                            right: 0,
+                            height: '60px',
+                            background: 'linear-gradient(to top, rgba(0,0,0,0.3), transparent)',
                         }} />
-                        <div style={{
-                            position: 'absolute',
-                            width: '80px',
-                            height: '80px',
-                            borderRadius: '50%',
-                            background: 'rgba(255,255,255,0.08)',
-                            bottom: '-20px',
-                            left: '20px',
-                        }} />
-                        <div style={{
-                            width: '72px',
-                            height: '72px',
-                            borderRadius: '20px',
-                            background: 'rgba(255,255,255,0.2)',
-                            backdropFilter: 'blur(10px)',
-                            display: 'flex',
-                            alignItems: 'center',
-                            justifyContent: 'center',
-                        }}>
-                            <IconComponent size={36} color="white" />
-                        </div>
                     </div>
 
                     {/* Content */}

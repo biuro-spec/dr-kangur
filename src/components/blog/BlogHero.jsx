@@ -9,38 +9,31 @@ const BlogHero = ({ article }) => {
 
     return (
         <section style={{
-            background: article.gradient,
             padding: '160px 0 80px',
             position: 'relative',
             overflow: 'hidden',
         }}>
-            {/* Decorative elements */}
+            {/* Background image */}
+            <img
+                src={article.image}
+                alt=""
+                style={{
+                    position: 'absolute',
+                    top: 0,
+                    left: 0,
+                    width: '100%',
+                    height: '100%',
+                    objectFit: 'cover',
+                }}
+            />
+            {/* Dark overlay for readability */}
             <div style={{
                 position: 'absolute',
-                width: '400px',
-                height: '400px',
-                borderRadius: '50%',
-                background: 'rgba(255,255,255,0.06)',
-                top: '-100px',
-                right: '-100px',
-            }} />
-            <div style={{
-                position: 'absolute',
-                width: '300px',
-                height: '300px',
-                borderRadius: '50%',
-                background: 'rgba(255,255,255,0.04)',
-                bottom: '-80px',
-                left: '-80px',
-            }} />
-            <div style={{
-                position: 'absolute',
-                width: '200px',
-                height: '200px',
-                borderRadius: '50%',
-                background: 'rgba(255,255,255,0.05)',
-                top: '40%',
-                left: '60%',
+                top: 0,
+                left: 0,
+                width: '100%',
+                height: '100%',
+                background: 'linear-gradient(to bottom, rgba(0,0,0,0.55), rgba(0,0,0,0.7))',
             }} />
 
             <div className="container" style={{ maxWidth: '1300px', margin: '0 auto', padding: '0 32px', position: 'relative', zIndex: 1 }}>
