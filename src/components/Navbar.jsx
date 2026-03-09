@@ -193,38 +193,50 @@ const Navbar = ({ scrolled }) => {
                             aria-label="Menu"
                             style={{
                                 border: 'none',
-                                background: 'none',
+                                background: isOpen ? 'linear-gradient(135deg, #CFA714, #E2C044)' : 'linear-gradient(135deg, #CFA714, #E5C14B)',
                                 cursor: 'pointer',
                                 display: 'flex',
                                 flexDirection: 'column',
-                                gap: '6px',
-                                padding: '8px',
+                                alignItems: 'center',
+                                justifyContent: 'center',
+                                gap: isOpen ? '0px' : '5px',
+                                width: '48px',
+                                height: '48px',
+                                borderRadius: '14px',
                                 zIndex: 10000,
+                                boxShadow: isOpen
+                                    ? '0 4px 20px rgba(207, 167, 20, 0.5), inset 0 1px 0 rgba(255,255,255,0.2)'
+                                    : '0 4px 16px rgba(207, 167, 20, 0.3), inset 0 1px 0 rgba(255,255,255,0.2)',
+                                transition: 'all 0.4s cubic-bezier(0.16, 1, 0.3, 1)',
+                                transform: isOpen ? 'rotate(180deg)' : 'rotate(0deg)',
                             }}
                         >
                             <span style={{
-                                width: '28px',
-                                height: '2px',
-                                background: '#2C3034',
-                                borderRadius: '2px',
-                                transition: 'all 0.3s',
-                                transform: isOpen ? 'rotate(45deg) translate(5px, 6px)' : 'none',
+                                width: isOpen ? '22px' : '24px',
+                                height: '2.5px',
+                                background: 'white',
+                                borderRadius: '3px',
+                                transition: 'all 0.4s cubic-bezier(0.16, 1, 0.3, 1)',
+                                transform: isOpen ? 'rotate(45deg) translate(1px, 1px)' : 'none',
+                                transformOrigin: 'center',
                             }} />
                             <span style={{
-                                width: '28px',
-                                height: '2px',
-                                background: '#2C3034',
-                                borderRadius: '2px',
-                                transition: 'all 0.3s',
+                                width: '18px',
+                                height: '2.5px',
+                                background: 'white',
+                                borderRadius: '3px',
+                                transition: 'all 0.3s cubic-bezier(0.16, 1, 0.3, 1)',
                                 opacity: isOpen ? 0 : 1,
+                                transform: isOpen ? 'scaleX(0)' : 'scaleX(1)',
                             }} />
                             <span style={{
-                                width: '28px',
-                                height: '2px',
-                                background: '#2C3034',
-                                borderRadius: '2px',
-                                transition: 'all 0.3s',
-                                transform: isOpen ? 'rotate(-45deg) translate(5px, -6px)' : 'none',
+                                width: isOpen ? '22px' : '24px',
+                                height: '2.5px',
+                                background: 'white',
+                                borderRadius: '3px',
+                                transition: 'all 0.4s cubic-bezier(0.16, 1, 0.3, 1)',
+                                transform: isOpen ? 'rotate(-45deg) translate(1px, -1px)' : 'none',
+                                transformOrigin: 'center',
                             }} />
                         </button>
                     )}
