@@ -91,6 +91,9 @@ const FloatingButtons = () => {
                     .floating-phone {
                         display: none !important;
                     }
+                    .floating-scroll-top {
+                        bottom: 32px !important;
+                    }
                 }
             `}</style>
         </>
