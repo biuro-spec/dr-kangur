@@ -121,7 +121,7 @@ const Hero = () => {
             <style>{`
                 @media (max-width: 1024px) {
                     #hero {
-                        padding-top: 200px !important;
+                        padding-top: 170px !important;
                         min-height: auto !important;
                     }
                 }
