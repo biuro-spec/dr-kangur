@@ -1,42 +1,271 @@
 import React from 'react';
-import { Bed, Accessibility, Wind, MoveHorizontal } from 'lucide-react';
+import { motion } from 'framer-motion';
+import { Bed, Accessibility, Wind, MoveHorizontal, Phone, CheckCircle, Truck, Clock, ShieldCheck } from 'lucide-react';
 
 const rentalItems = [
-    { icon: Bed, title: 'Łóżka rehabilitacyjne', desc: 'Elektryczne, sterowane pilotem łóżka podnoszące komfort opieki.' },
-    { icon: Accessibility, title: 'Wózki inwalidzkie', desc: 'Lekkie i składane wózki dla osób z trudnościami w poruszaniu się.' },
-    { icon: Wind, title: 'Koncentratory tlenu', desc: 'Niezbędne wsparcie w tlenoterapii domowej. Modele stacjonarne i przenośne.' },
-    { icon: MoveHorizontal, title: 'Szyny CPM Ortoflex', desc: 'Specjalistyczny sprzęt do automatycznej rehabilitacji stawu kolanowego.' },
+    {
+        icon: Bed,
+        title: 'Łóżka rehabilitacyjne',
+        desc: 'Elektryczne, sterowane pilotem łóżka podnoszące komfort opieki domowej. Regulacja wysokości, zagłówka i podnóżka.',
+        features: ['Sterowanie pilotem', 'Regulacja pozycji', 'Barierki ochronne'],
+    },
+    {
+        icon: Accessibility,
+        title: 'Wózki inwalidzkie',
+        desc: 'Lekkie i składane wózki dla osób z trudnościami w poruszaniu się. Różne rozmiary i modele.',
+        features: ['Lekka konstrukcja', 'Składane', 'Hamulce postojowe'],
+    },
+    {
+        icon: Wind,
+        title: 'Koncentratory tlenu',
+        desc: 'Niezbędne wsparcie w tlenoterapii domowej. Modele stacjonarne i przenośne dla pełnej mobilności.',
+        features: ['Stacjonarne i przenośne', 'Cicha praca', 'Prosty w obsłudze'],
+    },
+    {
+        icon: MoveHorizontal,
+        title: 'Szyny CPM Ortoflex',
+        desc: 'Specjalistyczny sprzęt do automatycznej rehabilitacji stawu kolanowego po operacjach i urazach.',
+        features: ['Automatyczny ruch', 'Regulacja zakresu', 'Po operacjach kolana'],
+    },
+];
+
+const advantages = [
+    { icon: Truck, text: 'Dostawa i odbiór pod drzwi' },
+    { icon: Clock, text: 'Elastyczne okresy wypożyczenia' },
+    { icon: ShieldCheck, text: 'Sprzęt serwisowany i dezynfekowany' },
 ];
 
 const Rental = () => {
     return (
-        <section className="py-24" id="rental" style={{ padding: '96px 0' }}>
-            <div className="container mx-auto px-6">
-                <div className="bg-[#2C3034] rounded-[48px] p-12 md:p-20 text-white overflow-hidden relative" style={{ background: '#2C3034', borderRadius: '48px', padding: '48px', color: 'white', overflow: 'hidden', position: 'relative' }}>
+        <section id="rental" style={{ padding: '96px 0' }}>
+            <div style={{ maxWidth: '1300px', margin: '0 auto', padding: '0 32px' }}>
+                <div style={{
+                    background: '#2C3034',
+                    borderRadius: '48px',
+                    padding: '64px 48px',
+                    color: 'white',
+                    overflow: 'hidden',
+                    position: 'relative',
+                }}>
+                    <div style={{ zIndex: 10, position: 'relative' }}>
+                        {/* Header */}
+                        <div style={{ marginBottom: '56px' }}>
+                            <span style={{
+                                color: '#CFA714',
+                                textTransform: 'uppercase',
+                                letterSpacing: '0.1em',
+                                fontWeight: 700,
+                                fontSize: '0.75rem',
+                                marginBottom: '12px',
+                                display: 'block',
+                            }}>
+                                Wsparcie domowe
+                            </span>
+                            <h2 style={{
+                                fontSize: 'clamp(2rem, 4vw, 2.75rem)',
+                                fontFamily: 'Outfit',
+                                marginBottom: '20px',
+                                maxWidth: '42rem',
+                                lineHeight: 1.1,
+                            }}>
+                                Posiadamy profesjonalną <span style={{ color: '#CFA714' }}>wypożyczalnię sprzętu</span> medycznego
+                            </h2>
+                            <p style={{
+                                color: 'rgba(255,255,255,0.7)',
+                                fontSize: '1.05rem',
+                                maxWidth: '600px',
+                                lineHeight: 1.7,
+                            }}>
+                                Oferujemy wypożyczenie profesjonalnego sprzętu rehabilitacyjnego i medycznego na potrzeby domowej opieki i rekonwalescencji.
+                            </p>
+                        </div>
 
-                    <div className="z-10 relative" style={{ zIndex: 10, position: 'relative' }}>
-                        <span className="text-[#CFA714] uppercase tracking-widest font-bold text-xs mb-3 block" style={{ color: '#CFA714', textTransform: 'uppercase', letterSpacing: '0.1em', fontWeight: 700, fontSize: '0.75rem', marginBottom: '12px', display: 'block' }}>Wsparcie domowe</span>
-                        <h2 className="text-4xl md:text-5xl font-outfit mb-12 max-w-2xl" style={{ fontSize: '2.25rem', fontFamily: 'Outfit', marginBottom: '48px', maxWidth: '42rem' }}>Posiadamy profesjonalną <span className="text-[#CFA714]">wypożyczalnię sprzętu</span> medycznego</h2>
-
-                        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '32px' }}>
-                            {rentalItems.map((item, i) => (
-                                <div key={item.title} className="bg-white/5 p-8 rounded-3xl border border-white/10" style={{ background: 'rgba(255,255,255,0.05)', padding: '32px', borderRadius: '24px', border: '1px solid rgba(255,255,255,0.1)' }}>
-                                    <item.icon className="text-[#CFA714] mb-6" size={40} style={{ color: '#CFA714', marginBottom: '24px' }} />
-                                    <h3 className="text-xl font-bold mb-3" style={{ fontSize: '1.25rem', fontWeight: 700, marginBottom: '12px' }}>{item.title}</h3>
-                                    <p className="text-[#9ca3af] text-sm leading-relaxed" style={{ color: '#9ca3af', fontSize: '0.875rem', lineHeight: 1.625 }}>{item.desc}</p>
+                        {/* Advantages strip */}
+                        <div style={{
+                            display: 'flex',
+                            flexWrap: 'wrap',
+                            gap: '24px',
+                            marginBottom: '48px',
+                        }}>
+                            {advantages.map((adv) => (
+                                <div key={adv.text} style={{
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    gap: '10px',
+                                    background: 'rgba(207, 167, 20, 0.1)',
+                                    border: '1px solid rgba(207, 167, 20, 0.2)',
+                                    padding: '10px 20px',
+                                    borderRadius: '100px',
+                                    fontSize: '0.85rem',
+                                    color: '#E5C14B',
+                                    fontWeight: 600,
+                                }}>
+                                    <adv.icon size={16} />
+                                    {adv.text}
                                 </div>
                             ))}
                         </div>
 
-                        <div className="mt-16 text-center bg-white/[0.03] border border-white/5 p-12 rounded-[40px] flex flex-col items-center gap-6" style={{ marginTop: '64px', textAlign: 'center', background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.05)', padding: '48px', borderRadius: '40px', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '24px' }}>
-                            <p className="text-xl text-gray-300" style={{ fontSize: '1.25rem', color: '#d1d5db' }}>Potrzebujesz sprzętu do rehabilitacji domowej?</p>
-                            <a href="tel:+48604246994" className="text-4xl md:text-5xl font-outfit font-extrabold hover:scale-105 transition-transform no-underline" style={{ color: '#CFA714', fontSize: 'clamp(2rem, 5vw, 3rem)', fontWeight: 800, textDecoration: 'none', background: 'var(--gold-gradient)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>+48 604 246 994</a>
+                        {/* Equipment cards grid */}
+                        <div style={{
+                            display: 'grid',
+                            gridTemplateColumns: 'repeat(2, 1fr)',
+                            gap: '24px',
+                        }}>
+                            {rentalItems.map((item, i) => (
+                                <motion.div
+                                    key={item.title}
+                                    initial={{ opacity: 0, y: 30 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    transition={{ delay: (i % 2) * 0.1, duration: 0.5, ease: 'easeOut' }}
+                                    viewport={{ once: true, amount: 0.15 }}
+                                    style={{
+                                        background: 'rgba(255,255,255,0.05)',
+                                        padding: '36px',
+                                        borderRadius: '28px',
+                                        border: '1px solid rgba(255,255,255,0.08)',
+                                        transition: 'background 0.3s, border-color 0.3s',
+                                    }}
+                                    onMouseEnter={(e) => {
+                                        e.currentTarget.style.background = 'rgba(255,255,255,0.08)';
+                                        e.currentTarget.style.borderColor = 'rgba(207, 167, 20, 0.2)';
+                                    }}
+                                    onMouseLeave={(e) => {
+                                        e.currentTarget.style.background = 'rgba(255,255,255,0.05)';
+                                        e.currentTarget.style.borderColor = 'rgba(255,255,255,0.08)';
+                                    }}
+                                >
+                                    <div style={{
+                                        width: '56px',
+                                        height: '56px',
+                                        borderRadius: '16px',
+                                        background: 'rgba(207, 167, 20, 0.15)',
+                                        display: 'flex',
+                                        alignItems: 'center',
+                                        justifyContent: 'center',
+                                        marginBottom: '20px',
+                                    }}>
+                                        <item.icon size={28} style={{ color: '#CFA714' }} />
+                                    </div>
+                                    <h3 style={{
+                                        fontSize: '1.25rem',
+                                        fontWeight: 700,
+                                        fontFamily: 'Outfit',
+                                        marginBottom: '10px',
+                                    }}>
+                                        {item.title}
+                                    </h3>
+                                    <p style={{
+                                        color: 'rgba(255,255,255,0.65)',
+                                        fontSize: '0.9rem',
+                                        lineHeight: 1.7,
+                                        marginBottom: '16px',
+                                    }}>
+                                        {item.desc}
+                                    </p>
+                                    <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                                        {item.features.map((f) => (
+                                            <span key={f} style={{
+                                                display: 'flex',
+                                                alignItems: 'center',
+                                                gap: '8px',
+                                                fontSize: '0.8rem',
+                                                color: 'rgba(255,255,255,0.55)',
+                                            }}>
+                                                <CheckCircle size={14} style={{ color: '#CFA714', flexShrink: 0 }} />
+                                                {f}
+                                            </span>
+                                        ))}
+                                    </div>
+                                </motion.div>
+                            ))}
+                        </div>
+
+                        {/* CTA */}
+                        <div style={{
+                            marginTop: '56px',
+                            textAlign: 'center',
+                            background: 'rgba(255,255,255,0.03)',
+                            border: '1px solid rgba(255,255,255,0.05)',
+                            padding: '48px',
+                            borderRadius: '32px',
+                            display: 'flex',
+                            flexDirection: 'column',
+                            alignItems: 'center',
+                            gap: '20px',
+                        }}>
+                            <p style={{ fontSize: '1.15rem', color: '#d1d5db' }}>
+                                Potrzebujesz sprzętu do rehabilitacji domowej?
+                            </p>
+                            <a
+                                href="tel:+48604246994"
+                                style={{
+                                    color: '#CFA714',
+                                    fontSize: 'clamp(1.8rem, 4vw, 2.8rem)',
+                                    fontWeight: 800,
+                                    fontFamily: 'Outfit',
+                                    textDecoration: 'none',
+                                    background: 'var(--gold-gradient)',
+                                    WebkitBackgroundClip: 'text',
+                                    WebkitTextFillColor: 'transparent',
+                                    display: 'inline-flex',
+                                    alignItems: 'center',
+                                    gap: '12px',
+                                    transition: 'transform 0.3s',
+                                }}
+                                onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.03)'}
+                                onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
+                            >
+                                <Phone size={28} style={{ color: '#CFA714', WebkitTextFillColor: 'initial' }} />
+                                604 246 994
+                            </a>
+                            <p style={{ fontSize: '0.85rem', color: 'rgba(255,255,255,0.45)' }}>
+                                Zadzwoń i zapytaj o dostępność i warunki wypożyczenia
+                            </p>
                         </div>
                     </div>
 
-                    <div className="absolute top-0 right-0 w-96 h-96 bg-[#598BBC] rounded-full filter blur-[100px] opacity-10 -translate-y-1/2 translate-x-1/2" style={{ position: 'absolute', top: 0, right: 0, width: '384px', height: '384px', background: '#598BBC', borderRadius: '50%', filter: 'blur(100px)', opacity: 0.1, transform: 'translate(50%, -50%)' }}></div>
+                    {/* Decorative blurs */}
+                    <div style={{
+                        position: 'absolute',
+                        top: 0,
+                        right: 0,
+                        width: '384px',
+                        height: '384px',
+                        background: '#598BBC',
+                        borderRadius: '50%',
+                        filter: 'blur(100px)',
+                        opacity: 0.1,
+                        transform: 'translate(50%, -50%)',
+                        pointerEvents: 'none',
+                    }} />
+                    <div style={{
+                        position: 'absolute',
+                        bottom: 0,
+                        left: 0,
+                        width: '300px',
+                        height: '300px',
+                        background: '#CFA714',
+                        borderRadius: '50%',
+                        filter: 'blur(100px)',
+                        opacity: 0.06,
+                        transform: 'translate(-40%, 40%)',
+                        pointerEvents: 'none',
+                    }} />
                 </div>
             </div>
+
+            {/* Responsive */}
+            <style>{`
+                @media (max-width: 768px) {
+                    #rental > div > div {
+                        padding: 36px 24px !important;
+                    }
+                    #rental > div > div > div > div:nth-child(3) {
+                        grid-template-columns: 1fr !important;
+                    }
+                }
+            `}</style>
         </section>
     );
 };
