@@ -188,60 +188,120 @@ const Navbar = ({ scrolled }) => {
             {/* Mobile Menu Overlay */}
             <AnimatePresence>
                 {isOpen && (
-                    <>
-                        <motion.div
-                            initial={{ opacity: 0 }}
-                            animate={{ opacity: 1 }}
-                            exit={{ opacity: 0 }}
+                    <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        transition={{ duration: 0.3 }}
+                        data-lenis-prevent
+                        style={{
+                            position: 'fixed',
+                            inset: 0,
+                            zIndex: 998,
+                            background: 'rgba(255, 255, 255, 0.92)',
+                            backdropFilter: 'blur(24px) saturate(180%)',
+                            WebkitBackdropFilter: 'blur(24px) saturate(180%)',
+                            display: 'flex',
+                            flexDirection: 'column',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            padding: '32px',
+                        }}
+                    >
+                        {/* Close button */}
+                        <button
                             onClick={() => setIsOpen(false)}
-                            style={{ position: 'fixed', inset: 0, background: 'rgba(0,0,0,0.5)', zIndex: 998 }}
-                        />
-                        <motion.div
-                            initial={{ opacity: 0, x: '100%' }}
-                            animate={{ opacity: 1, x: 0 }}
-                            exit={{ opacity: 0, x: '100%' }}
-                            style={{ position: 'fixed', right: 0, top: 0, height: '100%', width: '80%', maxWidth: '300px', background: 'white', zIndex: 999, display: 'flex', flexDirection: 'column', padding: '32px' }}
+                            style={{
+                                position: 'absolute',
+                                top: '20px',
+                                right: '24px',
+                                border: 'none',
+                                background: 'none',
+                                cursor: 'pointer',
+                                color: '#2C3034',
+                                zIndex: 1001,
+                            }}
                         >
-                            <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '40px' }}>
-                                <img src="/dr_kangur_logo.png" alt="Logo" style={{ width: '64px' }} />
-                                <button onClick={() => setIsOpen(false)} style={{ border: 'none', background: 'none', cursor: 'pointer' }}><X size={32} /></button>
-                            </div>
-                            <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
-                                {sectionLinks.map(link => (
-                                    <a
-                                        key={link.name}
-                                        href={isHome ? link.href : '/' + link.href}
-                                        onClick={(e) => {
-                                            setIsOpen(false);
-                                            if (!isHome) {
-                                                e.preventDefault();
-                                                navigate('/' + link.href);
-                                            }
-                                        }}
-                                        style={{ fontSize: '1.5rem', fontFamily: 'Outfit', fontWeight: 700, color: '#2C3034', textDecoration: 'none' }}
-                                    >
-                                        {link.name}
-                                    </a>
-                                ))}
+                            <X size={32} />
+                        </button>
+
+                        {/* Logo */}
+                        <img src="/dr_kangur_logo.png" alt="Logo" style={{ width: '80px', marginBottom: '40px' }} />
+
+                        {/* Links */}
+                        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '20px' }}>
+                            {sectionLinks.map((link, i) => (
+                                <motion.a
+                                    key={link.name}
+                                    href={isHome ? link.href : '/' + link.href}
+                                    onClick={(e) => {
+                                        setIsOpen(false);
+                                        if (!isHome) {
+                                            e.preventDefault();
+                                            navigate('/' + link.href);
+                                        }
+                                    }}
+                                    initial={{ opacity: 0, y: 20 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    transition={{ delay: i * 0.05, duration: 0.3 }}
+                                    style={{
+                                        fontSize: '1.3rem',
+                                        fontFamily: 'Outfit',
+                                        fontWeight: 700,
+                                        color: '#2C3034',
+                                        textDecoration: 'none',
+                                        textTransform: 'uppercase',
+                                        letterSpacing: '0.04em',
+                                    }}
+                                >
+                                    {link.name}
+                                </motion.a>
+                            ))}
+                            <motion.div
+                                initial={{ opacity: 0, y: 20 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ delay: sectionLinks.length * 0.05, duration: 0.3 }}
+                            >
                                 <Link
                                     to="/blog"
                                     onClick={() => setIsOpen(false)}
                                     style={{
-                                        fontSize: '1.5rem',
+                                        fontSize: '1.3rem',
                                         fontFamily: 'Outfit',
                                         fontWeight: 700,
                                         color: isBlogActive ? '#CFA714' : '#2C3034',
                                         textDecoration: 'none',
+                                        textTransform: 'uppercase',
+                                        letterSpacing: '0.04em',
                                     }}
                                 >
                                     Blog
                                 </Link>
-                                <a href="tel:+48784565994" style={{ marginTop: '32px', background: '#CFA714', color: 'white', padding: '16px', borderRadius: '12px', textAlign: 'center', fontWeight: 700, textDecoration: 'none' }}>
-                                    Zadzwoń teraz
-                                </a>
-                            </div>
-                        </motion.div>
-                    </>
+                            </motion.div>
+
+                            {/* CTA */}
+                            <motion.a
+                                href="tel:+48784565994"
+                                initial={{ opacity: 0, y: 20 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ delay: (sectionLinks.length + 1) * 0.05, duration: 0.3 }}
+                                style={{
+                                    marginTop: '24px',
+                                    background: 'linear-gradient(135deg, #CFA714, #E2C044)',
+                                    color: 'white',
+                                    padding: '16px 48px',
+                                    borderRadius: '12px',
+                                    textAlign: 'center',
+                                    fontWeight: 700,
+                                    textDecoration: 'none',
+                                    fontSize: '1.1rem',
+                                    boxShadow: '0 4px 16px rgba(207, 167, 20, 0.3)',
+                                }}
+                            >
+                                Zadzwoń teraz
+                            </motion.a>
+                        </div>
+                    </motion.div>
                 )}
             </AnimatePresence>
         </nav>
