@@ -417,7 +417,7 @@ const Footer = () => {
                     <div style={{
                         maxWidth: '1300px',
                         margin: '0 auto',
-                        padding: '0 32px',
+                        padding: '0 100px 0 32px',
                         display: 'flex',
                         flexDirection: 'column',
                         alignItems: 'center',
@@ -498,7 +498,10 @@ const Footer = () => {
                         text-align: center !important;
                     }
                     .footer-bottom-bar {
-                        padding: 20px 16px 100px !important;
+                        padding: 20px 16px 120px !important;
+                    }
+                    .footer-bottom-bar > div {
+                        padding: 0 16px !important;
                     }
                     .footer-credit {
                         flex-direction: column !important;
