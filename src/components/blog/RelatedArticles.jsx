@@ -6,7 +6,7 @@ const RelatedArticles = ({ articles }) => {
     if (!articles || articles.length === 0) return null;
 
     return (
-        <section style={{ padding: '80px 0', background: '#f8f9fa' }}>
+        <section className="related-section" style={{ padding: '80px 0', background: '#f8f9fa' }}>
             <div className="container" style={{ maxWidth: '1300px', margin: '0 auto', padding: '0 32px' }}>
                 <div style={{ textAlign: 'center', marginBottom: '48px' }}>
                     <span style={{
@@ -30,7 +30,7 @@ const RelatedArticles = ({ articles }) => {
                     </h2>
                 </div>
 
-                <div style={{
+                <div className="related-grid" style={{
                     display: 'grid',
                     gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
                     gap: '32px',
@@ -42,6 +42,21 @@ const RelatedArticles = ({ articles }) => {
                     ))}
                 </div>
             </div>
+
+            <style>{`
+                @media (max-width: 768px) {
+                    .related-section {
+                        padding: 48px 0 !important;
+                    }
+                    .related-section .container {
+                        padding: 0 16px !important;
+                    }
+                    .related-grid {
+                        grid-template-columns: 1fr !important;
+                        gap: 20px !important;
+                    }
+                }
+            `}</style>
         </section>
     );
 };

@@ -3,7 +3,7 @@ import { AlertCircle, CheckCircle, Lightbulb } from 'lucide-react';
 
 const BlogContent = ({ content }) => {
     return (
-        <div>
+        <div className="blog-content-body">
             {content.map((block, i) => {
                 switch (block.type) {
                     case 'heading':
@@ -148,6 +148,25 @@ const BlogContent = ({ content }) => {
                         return null;
                 }
             })}
+
+            <style>{`
+                @media (max-width: 768px) {
+                    .blog-content-body h2 {
+                        font-size: 1.25rem !important;
+                        margin-top: 28px !important;
+                    }
+                    .blog-content-body p {
+                        font-size: 0.95rem !important;
+                        line-height: 1.75 !important;
+                    }
+                    .blog-content-body [style*="borderLeft: 4px"] {
+                        padding: 16px 14px !important;
+                    }
+                    .blog-content-body li {
+                        font-size: 0.9rem !important;
+                    }
+                }
+            `}</style>
         </div>
     );
 };

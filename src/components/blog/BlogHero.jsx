@@ -8,7 +8,7 @@ const BlogHero = ({ article }) => {
     const IconComponent = LucideIcons[article.icon] || LucideIcons.FileText;
 
     return (
-        <section style={{
+        <section className="blog-hero" style={{
             padding: '160px 0 80px',
             position: 'relative',
             overflow: 'hidden',
@@ -121,6 +121,30 @@ const BlogHero = ({ article }) => {
                     </div>
                 </motion.div>
             </div>
+
+            <style>{`
+                @media (max-width: 768px) {
+                    .blog-hero {
+                        padding: 120px 0 48px !important;
+                    }
+                    .blog-hero .container {
+                        padding: 0 16px !important;
+                    }
+                    .blog-hero h1 {
+                        font-size: 1.7rem !important;
+                    }
+                    .blog-hero [style*="width: 88px"] {
+                        width: 64px !important;
+                        height: 64px !important;
+                        border-radius: 18px !important;
+                        margin-bottom: 20px !important;
+                    }
+                    .blog-hero [style*="width: 88px"] svg {
+                        width: 32px !important;
+                        height: 32px !important;
+                    }
+                }
+            `}</style>
         </section>
     );
 };

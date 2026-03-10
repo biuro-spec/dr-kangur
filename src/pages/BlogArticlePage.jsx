@@ -76,7 +76,7 @@ const BlogArticlePage = () => {
             <BlogHero article={article} />
 
             {/* Breadcrumbs */}
-            <div style={{ background: '#f8f9fa', padding: '16px 0', borderBottom: '1px solid #eee' }}>
+            <div className="blog-breadcrumbs" style={{ background: '#f8f9fa', padding: '16px 0', borderBottom: '1px solid #eee' }}>
                 <div className="container" style={{ maxWidth: '1300px', margin: '0 auto', padding: '0 32px' }}>
                     <nav style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.85rem', flexWrap: 'wrap' }}>
                         <Link to="/" style={{ color: '#598BBC', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '4px' }}>
@@ -94,9 +94,10 @@ const BlogArticlePage = () => {
             </div>
 
             {/* Content + Sidebar */}
-            <section style={{ padding: '64px 0' }}>
+            <section className="blog-article-content" style={{ padding: '64px 0' }}>
                 <div className="container" style={{ maxWidth: '1300px', margin: '0 auto', padding: '0 32px' }}>
                     <motion.div
+                        className="blog-article-grid"
                         initial={{ opacity: 0, y: 12 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.4 }}
@@ -108,7 +109,7 @@ const BlogArticlePage = () => {
                         }}
                     >
                         {/* Main Content */}
-                        <article style={{
+                        <article className="blog-article-main" style={{
                             background: 'white',
                             borderRadius: '32px',
                             padding: '48px',
@@ -133,8 +134,36 @@ const BlogArticlePage = () => {
             {/* Responsive styles */}
             <style>{`
                 @media (max-width: 1024px) {
-                    .container > div[style*="grid-template-columns: 1fr 340px"] {
+                    .blog-article-grid {
                         grid-template-columns: 1fr !important;
+                    }
+                }
+                @media (max-width: 768px) {
+                    .blog-article-content {
+                        padding: 32px 0 !important;
+                    }
+                    .blog-article-content .container {
+                        padding: 0 12px !important;
+                    }
+                    .blog-article-grid {
+                        grid-template-columns: 1fr !important;
+                        gap: 24px !important;
+                    }
+                    .blog-article-main {
+                        padding: 24px 18px !important;
+                        border-radius: 20px !important;
+                    }
+                    .blog-article-main h2 {
+                        font-size: 1.3rem !important;
+                    }
+                    .blog-article-main p {
+                        font-size: 0.95rem !important;
+                    }
+                    .blog-breadcrumbs .container {
+                        padding: 0 16px !important;
+                    }
+                    .blog-breadcrumbs nav {
+                        font-size: 0.75rem !important;
                     }
                 }
             `}</style>

@@ -37,7 +37,7 @@ const BlogListPage = () => {
             <Navbar scrolled={scrolled} />
 
             {/* Hero */}
-            <section style={{
+            <section className="blog-list-hero" style={{
                 background: 'linear-gradient(135deg, #2D3953 0%, #598BBC 100%)',
                 padding: '160px 0 80px',
                 position: 'relative',
@@ -156,7 +156,7 @@ const BlogListPage = () => {
             </section>
 
             {/* Category filters */}
-            <section style={{ padding: '40px 0 0' }}>
+            <section className="blog-list-filters" style={{ padding: '40px 0 0' }}>
                 <div className="container" style={{ maxWidth: '1300px', margin: '0 auto', padding: '0 32px' }}>
                     <div style={{
                         display: 'flex',
@@ -206,10 +206,10 @@ const BlogListPage = () => {
             </section>
 
             {/* Articles Grid */}
-            <section style={{ padding: '48px 0 96px' }}>
+            <section className="blog-list-articles" style={{ padding: '48px 0 96px' }}>
                 <div className="container" style={{ maxWidth: '1300px', margin: '0 auto', padding: '0 32px' }}>
                     {filtered.length > 0 ? (
-                        <div style={{
+                        <div className="blog-list-grid" style={{
                             display: 'grid',
                             gridTemplateColumns: 'repeat(3, 1fr)',
                             gap: '32px',
@@ -249,13 +249,33 @@ const BlogListPage = () => {
             {/* Responsive styles */}
             <style>{`
                 @media (max-width: 1024px) {
-                    .container > div[style*="grid-template-columns: repeat(3"] {
+                    .blog-list-grid {
                         grid-template-columns: repeat(2, 1fr) !important;
                     }
                 }
-                @media (max-width: 640px) {
-                    .container > div[style*="grid-template-columns"] {
+                @media (max-width: 768px) {
+                    .blog-list-grid {
                         grid-template-columns: 1fr !important;
+                        gap: 20px !important;
+                    }
+                    .blog-list-hero {
+                        padding: 120px 0 48px !important;
+                    }
+                    .blog-list-hero .container {
+                        padding: 0 16px !important;
+                    }
+                    .blog-list-filters .container {
+                        padding: 0 16px !important;
+                    }
+                    .blog-list-filters .container > div > button {
+                        padding: 8px 16px !important;
+                        font-size: 0.8rem !important;
+                    }
+                    .blog-list-articles {
+                        padding: 32px 0 64px !important;
+                    }
+                    .blog-list-articles .container {
+                        padding: 0 16px !important;
                     }
                 }
             `}</style>

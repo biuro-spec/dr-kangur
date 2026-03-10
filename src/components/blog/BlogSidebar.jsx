@@ -8,7 +8,7 @@ const BlogSidebar = ({ content }) => {
         .filter(Boolean);
 
     return (
-        <aside style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
+        <aside className="blog-sidebar" style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
             {/* Table of Contents */}
             {headings.length > 0 && (
                 <div style={{
@@ -110,6 +110,20 @@ const BlogSidebar = ({ content }) => {
                     784 565 994
                 </a>
             </div>
+
+            <style>{`
+                @media (max-width: 1024px) {
+                    .blog-sidebar > div {
+                        position: static !important;
+                    }
+                }
+                @media (max-width: 768px) {
+                    .blog-sidebar > div {
+                        padding: 24px 20px !important;
+                        border-radius: 20px !important;
+                    }
+                }
+            `}</style>
         </aside>
     );
 };
