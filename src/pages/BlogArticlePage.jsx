@@ -61,7 +61,7 @@ const BlogArticlePage = () => {
                         className="btn-premium"
                         style={{ textDecoration: 'none' }}
                     >
-                        Wróć do bloga
+                        Wróć do{'\u00A0'}bloga
                     </Link>
                 </div>
                 <Footer />

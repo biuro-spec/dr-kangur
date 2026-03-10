@@ -6,33 +6,33 @@ const rentalItems = [
     {
         icon: Bed,
         title: 'Łóżka rehabilitacyjne',
-        desc: 'Elektryczne, sterowane pilotem łóżka podnoszące komfort opieki domowej. Regulacja wysokości, zagłówka i podnóżka.',
+        desc: 'Elektryczne, sterowane pilotem łóżka podnoszące komfort opieki domowej. Regulacja wysokości, zagłówka i\u00A0podnóżka.',
         features: ['Sterowanie pilotem', 'Regulacja pozycji', 'Barierki ochronne'],
     },
     {
         icon: Accessibility,
         title: 'Wózki inwalidzkie',
-        desc: 'Lekkie i składane wózki dla osób z trudnościami w poruszaniu się. Różne rozmiary i modele.',
+        desc: 'Lekkie i\u00A0składane wózki dla osób z\u00A0trudnościami w\u00A0poruszaniu się. Różne rozmiary i\u00A0modele.',
         features: ['Lekka konstrukcja', 'Składane', 'Hamulce postojowe'],
     },
     {
         icon: Wind,
         title: 'Koncentratory tlenu',
-        desc: 'Niezbędne wsparcie w tlenoterapii domowej. Modele stacjonarne i przenośne dla pełnej mobilności.',
-        features: ['Stacjonarne i przenośne', 'Cicha praca', 'Prosty w obsłudze'],
+        desc: 'Niezbędne wsparcie w\u00A0tlenoterapii domowej. Modele stacjonarne i\u00A0przenośne dla pełnej mobilności.',
+        features: ['Stacjonarne i\u00A0przenośne', 'Cicha praca', 'Prosty w\u00A0obsłudze'],
     },
     {
         icon: MoveHorizontal,
         title: 'Szyny CPM Ortoflex',
-        desc: 'Specjalistyczny sprzęt do automatycznej rehabilitacji stawu kolanowego po operacjach i urazach.',
-        features: ['Automatyczny ruch', 'Regulacja zakresu', 'Po operacjach kolana'],
+        desc: 'Specjalistyczny sprzęt do\u00A0automatycznej rehabilitacji stawu kolanowego po\u00A0operacjach i\u00A0urazach.',
+        features: ['Automatyczny ruch', 'Regulacja zakresu', 'Po\u00A0operacjach kolana'],
     },
 ];
 
 const advantages = [
-    { icon: Truck, text: 'Dostawa i odbiór pod drzwi' },
+    { icon: Truck, text: 'Dostawa i\u00A0odbiór pod drzwi' },
     { icon: Clock, text: 'Elastyczne okresy wypożyczenia' },
-    { icon: ShieldCheck, text: 'Sprzęt serwisowany i dezynfekowany' },
+    { icon: ShieldCheck, text: 'Sprzęt serwisowany i\u00A0dezynfekowany' },
 ];
 
 const Rental = () => {
@@ -76,7 +76,7 @@ const Rental = () => {
                                 maxWidth: '600px',
                                 lineHeight: 1.7,
                             }}>
-                                Oferujemy wypożyczenie profesjonalnego sprzętu rehabilitacyjnego i medycznego na potrzeby domowej opieki i rekonwalescencji.
+                                Oferujemy wypożyczenie profesjonalnego sprzętu rehabilitacyjnego i{'\u00A0'}medycznego na{'\u00A0'}potrzeby domowej opieki i{'\u00A0'}rekonwalescencji.
                             </p>
                         </div>
 
@@ -195,7 +195,7 @@ const Rental = () => {
                             gap: '20px',
                         }}>
                             <p style={{ fontSize: '1.15rem', color: '#d1d5db' }}>
-                                Potrzebujesz sprzętu do rehabilitacji domowej?
+                                Potrzebujesz sprzętu do{'\u00A0'}rehabilitacji domowej?
                             </p>
                             <a
                                 href="tel:+48604246994"
@@ -220,7 +220,7 @@ const Rental = () => {
                                 604 246 994
                             </a>
                             <p style={{ fontSize: '0.85rem', color: 'rgba(255,255,255,0.45)' }}>
-                                Zadzwoń i zapytaj o dostępność i warunki wypożyczenia
+                                Zadzwoń i{'\u00A0'}zapytaj o{'\u00A0'}dostępność i{'\u00A0'}warunki wypożyczenia
                             </p>
                         </div>
                     </div>

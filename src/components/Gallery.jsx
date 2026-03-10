@@ -43,7 +43,7 @@ const Gallery = () => {
                         Galeria <span style={{ color: '#CFA714' }}>gabinetu</span>
                     </h2>
                     <p style={{ color: '#444A56', maxWidth: '42rem', margin: '0 auto' }}>
-                        Nowoczesne wnętrza i profesjonalny sprzęt — u nas czujesz się komfortowo od pierwszej wizyty.
+                        Nowoczesne wnętrza i{'\u00A0'}profesjonalny sprzęt — u{'\u00A0'}nas czujesz się komfortowo od{'\u00A0'}pierwszej wizyty.
                     </p>
                 </div>
 

@@ -5,31 +5,31 @@ import { Star, ChevronLeft, ChevronRight, Quote } from 'lucide-react';
 const testimonials = [
     {
         name: 'Anna K.',
-        text: 'Po operacji kolana szukałam profesjonalnej rehabilitacji. W DR KANGUR znalazłam nie tylko nowoczesny sprzęt, ale przede wszystkim wspaniały zespół, który pomógł mi wrócić do pełnej sprawności. Polecam z całego serca!',
+        text: 'Po\u00A0operacji kolana szukałam profesjonalnej rehabilitacji. W\u00A0DR KANGUR znalazłam nie tylko nowoczesny sprzęt, ale przede wszystkim wspaniały zespół, który pomógł mi wrócić do\u00A0pełnej sprawności. Polecam z\u00A0całego serca!',
         rating: 5,
         treatment: 'Rehabilitacja pooperacyjna',
     },
     {
         name: 'Marek W.',
-        text: 'Fala uderzeniowa zrobiła cuda z moją ostrogą piętową. Po kilku zabiegach ból praktycznie ustąpił. Profesjonalne podejście i miła atmosfera – to wyróżnia ten gabinet.',
+        text: 'Fala uderzeniowa zrobiła cuda z\u00A0moją ostrogą piętową. Po\u00A0kilku zabiegach ból praktycznie ustąpił. Profesjonalne podejście i\u00A0miła atmosfera – to\u00A0wyróżnia ten gabinet.',
         rating: 5,
         treatment: 'Fala uderzeniowa',
     },
     {
         name: 'Katarzyna L.',
-        text: 'Korzystam z masażu gorącymi kamieniami regularnie. To niesamowite, jak jeden zabieg potrafi rozluźnić napięte mięśnie i poprawić samopoczucie. Fizjoterapeutki są bardzo profesjonalne i uważne.',
+        text: 'Korzystam z\u00A0masażu gorącymi kamieniami regularnie. To\u00A0niesamowite, jak jeden zabieg potrafi rozluźnić napięte mięśnie i\u00A0poprawić samopoczucie. Fizjoterapeutki są bardzo profesjonalne i\u00A0uważne.',
         rating: 5,
         treatment: 'Masaż gorącymi kamieniami',
     },
     {
         name: 'Tomasz P.',
-        text: 'Wypożyczyłem łóżko rehabilitacyjne dla mamy po operacji biodra. Szybki kontakt, sprawna dostawa i świetna jakość sprzętu. Bardzo pomocni ludzie – dziękuję!',
+        text: 'Wypożyczyłem łóżko rehabilitacyjne dla mamy po\u00A0operacji biodra. Szybki kontakt, sprawna dostawa i\u00A0świetna jakość sprzętu. Bardzo pomocni ludzie – dziękuję!',
         rating: 5,
         treatment: 'Wypożyczalnia sprzętu',
     },
     {
         name: 'Ewa M.',
-        text: 'Hydroterapia w DR KANGUR to prawdziwa przyjemność. Nowoczesny sprzęt, czyste pomieszczenia i fachowa opieka. Po kilku sesjach moje bóle stawów znacząco się zmniejszyły.',
+        text: 'Hydroterapia w\u00A0DR KANGUR to\u00A0prawdziwa przyjemność. Nowoczesny sprzęt, czyste pomieszczenia i\u00A0fachowa opieka. Po\u00A0kilku sesjach moje bóle stawów znacząco się zmniejszyły.',
         rating: 5,
         treatment: 'Hydroterapia',
     },
@@ -70,7 +70,7 @@ const Testimonials = () => {
                         Opinie pacjentów
                     </span>
                     <h2 style={{ color: '#2C3034', fontSize: '3rem', marginBottom: '16px' }}>
-                        Co mówią nasi <span style={{ color: '#CFA714' }}>pacjenci</span>
+                        Co{'\u00A0'}mówią nasi <span style={{ color: '#CFA714' }}>pacjenci</span>
                     </h2>
                     <p style={{ color: '#444A56', maxWidth: '42rem', margin: '0 auto' }}>
                         Satysfakcja pacjentów jest dla nas najważniejsza. Oto opinie osób, które nam zaufały.

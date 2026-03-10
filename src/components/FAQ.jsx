@@ -5,36 +5,36 @@ import { generateFAQSchema, injectSchema, removeSchema } from '../utils/seo';
 
 const faqs = [
     {
-        question: 'Czy przyjmujecie na NFZ?',
-        answer: 'Tak! Nasz gabinet posiada kontrakt z Narodowym Funduszem Zdrowia jako Poradnia Rehabilitacyjna. Wystarczy skierowanie od specjalisty – można zadzwonić i umówić się na konsultację z lekarzem, a następnie skorzystać z naszych usług.'
+        question: 'Czy przyjmujecie na\u00A0NFZ?',
+        answer: 'Tak! Nasz gabinet posiada kontrakt z\u00A0Narodowym Funduszem Zdrowia jako Poradnia Rehabilitacyjna. Wystarczy skierowanie od\u00A0specjalisty – można zadzwonić i\u00A0umówić się na\u00A0konsultację z\u00A0lekarzem, a\u00A0następnie skorzystać z\u00A0naszych usług.'
     },
     {
-        question: 'Jak mogę umówić się na wizytę?',
-        answer: 'Najprościej zadzwonić pod numer 784 565 994 w godzinach 8:00 - 18:00 (poniedziałek - piątek). Można też wysłać wiadomość przez formularz na naszej stronie lub napisać na adres kontakt@drkangur.pl.'
+        question: 'Jak mogę umówić się na\u00A0wizytę?',
+        answer: 'Najprościej zadzwonić pod numer 784 565 994 w\u00A0godzinach 8:00 - 18:00 (poniedziałek - piątek). Można też wysłać wiadomość przez formularz na\u00A0naszej stronie lub napisać na\u00A0adres kontakt@drkangur.pl.'
     },
     {
         question: 'Czy potrzebuję skierowania?',
-        answer: 'Na wizytę prywatną skierowanie nie jest wymagane. W przypadku korzystania z usług w ramach NFZ potrzebne jest skierowanie od lekarza specjalisty. Lekarz w naszej Poradni Rehabilitacyjnej również może wystawić stosowne zlecenie.'
+        answer: 'Na\u00A0wizytę prywatną skierowanie nie jest wymagane. W\u00A0przypadku korzystania z\u00A0usług w\u00A0ramach NFZ potrzebne jest skierowanie od\u00A0lekarza specjalisty. Lekarz w\u00A0naszej Poradni Rehabilitacyjnej również może wystawić stosowne zlecenie.'
     },
     {
         question: 'Jakie zabiegi oferujecie?',
-        answer: 'Oferujemy szeroki wachlarz usług: rehabilitację po urazach i operacjach, fizjoterapię manualną, masaże lecznicze, falę uderzeniową, laseroterapię wysokoenergetyczną, krioterapię, taping medyczny, hydroterapię, masaż pneumatyczno-uciskowy oraz terapię blizn.'
+        answer: 'Oferujemy szeroki wachlarz usług: rehabilitację po\u00A0urazach i\u00A0operacjach, fizjoterapię manualną, masaże lecznicze, falę uderzeniową, laseroterapię wysokoenergetyczną, krioterapię, taping medyczny, hydroterapię, masaż pneumatyczno-uciskowy oraz terapię blizn.'
     },
     {
         question: 'Czy wypożyczacie sprzęt medyczny?',
-        answer: 'Tak, posiadamy profesjonalną wypożyczalnię sprzętu medycznego: łóżka rehabilitacyjne elektryczne, wózki inwalidzkie, koncentratory tlenu, szyny CPM Ortoflex, podnośniki dla osób niepełnosprawnych, chodziki i kule. Kontakt do wypożyczalni: 604 246 994.'
+        answer: 'Tak, posiadamy profesjonalną wypożyczalnię sprzętu medycznego: łóżka rehabilitacyjne elektryczne, wózki inwalidzkie, koncentratory tlenu, szyny CPM Ortoflex, podnośniki dla osób niepełnosprawnych, chodziki i\u00A0kule. Kontakt do\u00A0wypożyczalni: 604 246 994.'
     },
     {
-        question: 'Ile trwa wizyta i rehabilitacja?',
-        answer: 'Czas wizyty zależy od rodzaju zabiegu – konsultacja trwa ok. 30 minut, a poszczególne zabiegi od 15 do 60 minut. Plan rehabilitacji jest indywidualnie dopasowywany do potrzeb pacjenta przez naszych specjalistów.'
+        question: 'Ile trwa wizyta i\u00A0rehabilitacja?',
+        answer: 'Czas wizyty zależy od\u00A0rodzaju zabiegu – konsultacja trwa ok. 30 minut, a\u00A0poszczególne zabiegi od\u00A015 do\u00A060 minut. Plan rehabilitacji jest indywidualnie dopasowywany do\u00A0potrzeb pacjenta przez naszych specjalistów.'
     },
     {
         question: 'Czy masaż gorącymi kamieniami jest bezpieczny?',
-        answer: 'Tak, masaż gorącymi kamieniami bazaltowymi jest bezpieczną i skuteczną formą terapii. Polecany jest osobom zestresowanym, zmęczonym, z napięciem mięśniowym czy problemami ze snem. Temperatura kamieni jest kontrolowana przez terapeutę.'
+        answer: 'Tak, masaż gorącymi kamieniami bazaltowymi jest bezpieczną i\u00A0skuteczną formą terapii. Polecany jest osobom zestresowanym, zmęczonym, z\u00A0napięciem mięśniowym czy problemami ze\u00A0snem. Temperatura kamieni jest kontrolowana przez terapeutę.'
     },
     {
         question: 'Dla kogo jest fala uderzeniowa?',
-        answer: 'Fala uderzeniowa jest polecana osobom z przewlekłym bólem ścięgien, mięśni i stawów, ostrogą piętową, łokciem tenisisty, bólem barku czy Achillesów. Sprawdza się również u sportowców i osób po urazach. Stosuje się ją także w medycynie estetycznej – redukcja cellulitu, wygładzanie blizn i rozstępów.'
+        answer: 'Fala uderzeniowa jest polecana osobom z\u00A0przewlekłym bólem ścięgien, mięśni i\u00A0stawów, ostrogą piętową, łokciem tenisisty, bólem barku czy Achillesów. Sprawdza się również u\u00A0sportowców i\u00A0osób po\u00A0urazach. Stosuje się ją także w\u00A0medycynie estetycznej – redukcja cellulitu, wygładzanie blizn i\u00A0rozstępów.'
     },
 ];
 
@@ -125,7 +125,7 @@ const FAQ = () => {
                         Najczęściej zadawane <span style={{ color: '#CFA714' }}>pytania</span>
                     </h2>
                     <p style={{ color: '#444A56', maxWidth: '42rem', margin: '0 auto' }}>
-                        Odpowiadamy na najczęstsze pytania naszych pacjentów. Jeśli nie znalazłeś odpowiedzi, skontaktuj się z nami.
+                        Odpowiadamy na{'\u00A0'}najczęstsze pytania naszych pacjentów. Jeśli nie znalazłeś odpowiedzi, skontaktuj się z{'\u00A0'}nami.
                     </p>
                 </div>
 

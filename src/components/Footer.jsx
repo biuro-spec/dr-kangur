@@ -110,7 +110,7 @@ const Footer = () => {
                                 color: 'rgba(255,255,255,0.85)',
                                 fontSize: '1rem',
                             }}>
-                                Skontaktuj się z nami i rozpocznij swoją drogę do zdrowia
+                                Skontaktuj się z{'\u00A0'}nami i{'\u00A0'}rozpocznij swoją drogę do{'\u00A0'}zdrowia
                             </p>
                         </div>
                         <a
@@ -179,7 +179,7 @@ const Footer = () => {
                                 fontSize: '0.95rem',
                                 marginBottom: '24px',
                             }}>
-                                Profesjonalna klinika fizjoterapii i rehabilitacji w Głubczycach. NFZ i prywatnie.
+                                Profesjonalna klinika fizjoterapii i{'\u00A0'}rehabilitacji w{'\u00A0'}Głubczycach. NFZ i{'\u00A0'}prywatnie.
                             </p>
 
                             {/* Contact info */}
@@ -428,7 +428,7 @@ const Footer = () => {
                             fontSize: '0.8rem',
                             margin: 0,
                         }}>
-                            &copy; {new Date().getFullYear()} DR KANGUR Rehabilitacja i Fizjoterapia
+                            &copy; {new Date().getFullYear()} DR KANGUR Rehabilitacja i{'\u00A0'}Fizjoterapia
                         </p>
 
                         <div className="footer-credit" style={{
@@ -442,7 +442,7 @@ const Footer = () => {
                             textAlign: 'center',
                         }}>
                             <Code size={14} style={{ opacity: 0.6 }} />
-                            <span>Napisane kodem z najnowszymi technologiami przez</span>
+                            <span>Napisane kodem z{'\u00A0'}najnowszymi technologiami przez</span>
                             <a
                                 href="https://webstudio47.pl"
                                 target="_blank"

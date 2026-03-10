@@ -6,21 +6,21 @@ const team = [
     {
         name: 'Specjalista fizjoterapii',
         role: 'Fizjoterapia manualna & MTG',
-        description: 'Wykwalifikowana fizjoterapeutka z wieloletnim doświadczeniem w terapii manualnej, masażu tkanek głębokich oraz tapingu. Specjalizuje się w rehabilitacji pourazowej i pooperacyjnej.',
+        description: 'Wykwalifikowana fizjoterapeutka z\u00A0wieloletnim doświadczeniem w\u00A0terapii manualnej, masażu tkanek głębokich oraz tapingu. Specjalizuje się w\u00A0rehabilitacji pourazowej i\u00A0pooperacyjnej.',
         specialties: ['Terapia manualna', 'Masaż tkanek głębokich', 'Taping limfatyczny'],
         icon: Award,
     },
     {
         name: 'Specjalista rehabilitacji',
         role: 'Rehabilitacja & Fizykoterapia',
-        description: 'Doświadczony terapeuta specjalizujący się w nowoczesnych metodach fizykoterapii – fali uderzeniowej, laseroterapii wysokoenergetycznej oraz krioterapii.',
+        description: 'Doświadczony terapeuta specjalizujący się w\u00A0nowoczesnych metodach fizykoterapii \u2013\u00A0fali uderzeniowej, laseroterapii wysokoenergetycznej oraz krioterapii.',
         specialties: ['Fala uderzeniowa', 'Laseroterapia', 'Krioterapia'],
         icon: GraduationCap,
     },
     {
         name: 'Specjalista hydroterapii',
         role: 'Hydroterapia & Masaże',
-        description: 'Terapeuta z pasją do hydroterapii i masaży leczniczych. Prowadzi zabiegi w wannie do hydroterapii oraz stanowisku do masażu wirowego rąk i nóg.',
+        description: 'Terapeuta z\u00A0pasją do\u00A0hydroterapii i\u00A0masaży leczniczych. Prowadzi zabiegi w\u00A0wannie do\u00A0hydroterapii oraz stanowisku do\u00A0masażu wirowego rąk i\u00A0nóg.',
         specialties: ['Hydroterapia', 'Masaż gorącymi kamieniami', 'Masaż relaksacyjny'],
         icon: Heart,
     },
@@ -38,7 +38,7 @@ const Team = () => {
                         Doświadczeni <span style={{ color: '#CFA714' }}>specjaliści</span>
                     </h2>
                     <p style={{ color: '#444A56', maxWidth: '42rem', margin: '0 auto' }}>
-                        Nasz zespół tworzą wykwalifikowani fizjoterapeuci z wieloletnim doświadczeniem, którzy nieustannie podnoszą swoje kwalifikacje.
+                        Nasz zespół tworzą wykwalifikowani fizjoterapeuci z{'\u00A0'}wieloletnim doświadczeniem, którzy nieustannie podnoszą swoje kwalifikacje.
                     </p>
                 </div>
 

@@ -6,7 +6,7 @@ const About = () => {
     const points = [
         "Indywidualne plany terapii",
         "Wykwalifikowana kadra medyczna",
-        "Gabinet z kontraktem NFZ",
+        "Gabinet z\u00A0kontraktem NFZ",
         "Nowoczesna sala ćwiczeń",
         "Głęboka hydroterapia",
         "Specjalistyczna terapia blizn"
@@ -169,7 +169,7 @@ const About = () => {
                             marginBottom: '24px',
                             lineHeight: 1.05,
                         }}>
-                            Klinika stworzona z myślą o{' '}
+                            Klinika stworzona z{'\u00A0'}myślą o{'\u00A0'}
                             <span style={{ color: '#CFA714' }}>Tobie</span>
                         </h2>
                         <p style={{
@@ -179,7 +179,7 @@ const About = () => {
                             lineHeight: 1.7,
                             maxWidth: '520px',
                         }}>
-                            Gabinet DR KANGUR to nowoczesne centrum fizjoterapii i rehabilitacji w sercu Głubczyc. Naszą misją jest poprawa jakości życia pacjentów poprzez skuteczne, indywidualnie dobrane terapie.
+                            Gabinet DR KANGUR to{'\u00A0'}nowoczesne centrum fizjoterapii i{'\u00A0'}rehabilitacji w{'\u00A0'}sercu Głubczyc. Naszą misją jest poprawa jakości życia pacjentów poprzez skuteczne, indywidualnie dobrane terapie.
                         </p>
 
                         <div style={{

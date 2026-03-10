@@ -4,9 +4,9 @@ import { Heart, ShieldCheck, Sparkles, Clock } from 'lucide-react';
 
 const stats = [
     { value: '2000+', label: 'Zadowolonych pacjentów', Icon: Heart },
-    { value: 'NFZ', label: 'Kontrakt z Narodowym Funduszem Zdrowia', Icon: ShieldCheck },
+    { value: 'NFZ', label: 'Kontrakt z\u00A0Narodowym Funduszem Zdrowia', Icon: ShieldCheck },
     { value: '9', label: 'Specjalistycznych zabiegów', Icon: Sparkles },
-    { value: '10+', label: 'Lat doświadczenia w rehabilitacji', Icon: Clock },
+    { value: '10+', label: 'Lat doświadczenia w\u00A0rehabilitacji', Icon: Clock },
 ];
 
 const Stats = () => {

@@ -20,18 +20,18 @@ const Contact = () => {
     const validate = () => {
         const newErrors = {};
         if (!formData.name.trim() || formData.name.trim().length < 2) {
-            newErrors.name = 'Podaj imię i nazwisko (min. 2 znaki)';
+            newErrors.name = 'Podaj imię i\u00A0nazwisko (min. 2\u00A0znaki)';
         }
         if (!formData.phone.trim()) {
             newErrors.phone = 'Podaj numer telefonu';
         } else if (!validatePhone(formData.phone)) {
-            newErrors.phone = 'Podaj prawidłowy numer telefonu (9 cyfr)';
+            newErrors.phone = 'Podaj prawidłowy numer telefonu (9\u00A0cyfr)';
         }
         if (!validateEmail(formData.email)) {
             newErrors.email = 'Podaj prawidłowy adres e-mail';
         }
         if (formData.message && formData.message.length > 1000) {
-            newErrors.message = 'Wiadomość może mieć maksymalnie 1000 znaków';
+            newErrors.message = 'Wiadomość może mieć maksymalnie 1000\u00A0znaków';
         }
         setErrors(newErrors);
         return Object.keys(newErrors).length === 0;
@@ -79,7 +79,7 @@ const Contact = () => {
         },
         {
             icon: Phone,
-            title: 'Telefon i Rejestracja',
+            title: 'Telefon i\u00A0Rejestracja',
             content: '+48 784 565 994',
             href: 'tel:+48784565994',
             highlight: true,
@@ -131,13 +131,13 @@ const Contact = () => {
                     style={{ textAlign: 'center', marginBottom: '64px' }}
                 >
                     <span style={{ color: '#598BBC', textTransform: 'uppercase', letterSpacing: '0.15em', fontWeight: 700, fontSize: '0.75rem', marginBottom: '12px', display: 'block' }}>
-                        Skontaktuj się z nami
+                        Skontaktuj się z{'\u00A0'}nami
                     </span>
                     <h2 style={{ color: '#2C3034', fontSize: '3rem', marginBottom: '16px' }}>
-                        Zapisz się na <span style={{ color: '#CFA714' }}>wizytę</span>
+                        Zapisz się na{'\u00A0'}<span style={{ color: '#CFA714' }}>wizytę</span>
                     </h2>
                     <p style={{ color: '#444A56', maxWidth: '42rem', margin: '0 auto' }}>
-                        Skontaktuj się z nami telefonicznie lub wypełnij formularz – oddzwonimy najszybciej jak to możliwe.
+                        Skontaktuj się z{'\u00A0'}nami telefonicznie lub wypełnij formularz – oddzwonimy najszybciej jak to{'\u00A0'}możliwe.
                     </p>
                 </motion.div>
 
@@ -261,7 +261,7 @@ const Contact = () => {
                             }}
                         >
                             <Navigation size={18} />
-                            Nawiguj do nas
+                            Nawiguj do{'\u00A0'}nas
                         </a>
                     </motion.div>
 
@@ -298,7 +298,7 @@ const Contact = () => {
                             {/* Name + Phone row */}
                             <div className="contact-form-row" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px' }}>
                                 <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
-                                    <label style={{ fontWeight: 600, color: '#2C3034', fontSize: '0.85rem' }}>Imię i Nazwisko *</label>
+                                    <label style={{ fontWeight: 600, color: '#2C3034', fontSize: '0.85rem' }}>Imię i{'\u00A0'}Nazwisko *</label>
                                     <input
                                         type="text"
                                         name="name"
@@ -360,7 +360,7 @@ const Contact = () => {
                                     name="message"
                                     value={formData.message}
                                     onChange={handleChange}
-                                    placeholder="Opisz z czym możemy pomóc..."
+                                    placeholder="Opisz z\u00A0czym możemy pomóc..."
                                     rows="4"
                                     style={{ ...inputStyle('message'), resize: 'vertical', minHeight: '110px' }}
                                     onFocus={(e) => { e.target.style.borderColor = '#598BBC'; e.target.style.boxShadow = '0 0 0 3px rgba(89, 139, 188, 0.1)'; }}
@@ -407,7 +407,7 @@ const Contact = () => {
                             </button>
 
                             <p style={{ textAlign: 'center', fontSize: '0.75rem', color: '#9ca3af', lineHeight: 1.4 }}>
-                                Oddzwonimy w ciągu 24h w dni robocze.
+                                Oddzwonimy w{'\u00A0'}ciągu 24h w{'\u00A0'}dni robocze.
                             </p>
                         </form>
                     </motion.div>

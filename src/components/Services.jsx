@@ -6,56 +6,56 @@ const services = [
     {
         icon: Activity,
         title: 'Rehabilitacja po urazach',
-        desc: 'Szybki powrót do ruchu po złamaniach, skręceniach i zerwaniach więzadeł.',
-        details: 'Oferujemy kompleksową opiekę po urazach, obejmującą terapie manualne zmniejszające ból i obrzęk, ćwiczenia stabilizacyjne i wzmacniające przywracające kontrolę nad stawem, fizykoterapię (laser, ultradźwięki, krioterapia) oraz indywidualne plany terapii dostosowane do stopnia urazu i stylu życia. Wczesna fizjoterapia to szybszy powrót do aktywności i mniejsze ryzyko przewlekłych problemów.',
+        desc: 'Szybki powrót do\u00A0ruchu po\u00A0złamaniach, skręceniach i\u00A0zerwaniach więzadeł.',
+        details: 'Oferujemy kompleksową opiekę po\u00A0urazach, obejmującą terapie manualne zmniejszające ból i\u00A0obrzęk, ćwiczenia stabilizacyjne i\u00A0wzmacniające przywracające kontrolę nad stawem, fizykoterapię (laser, ultradźwięki, krioterapia) oraz indywidualne plany terapii dostosowane do\u00A0stopnia urazu i\u00A0stylu życia. Wczesna fizjoterapia to\u00A0szybszy powrót do\u00A0aktywności i\u00A0mniejsze ryzyko przewlekłych problemów.',
     },
     {
         icon: Layers,
         title: 'Rehabilitacja po operacjach',
-        desc: 'Opieka po zabiegach ortopedycznych i neurochirurgicznych.',
-        details: 'Specjalizujemy się w rehabilitacji po operacjach kolana (rekonstrukcja ACL, endoproteza, artroskopia), zabiegach ortopedycznych i neurochirurgicznych. Wykorzystujemy również szyny CPM Ortoflex do biernego ruchu stawu kolanowego, które przyspieszają regenerację, zapobiegają sztywności i poprawiają zakres ruchu.',
+        desc: 'Opieka po\u00A0zabiegach ortopedycznych i\u00A0neurochirurgicznych.',
+        details: 'Specjalizujemy się\u00A0w\u00A0rehabilitacji po\u00A0operacjach kolana (rekonstrukcja ACL, endoproteza, artroskopia), zabiegach ortopedycznych i\u00A0neurochirurgicznych. Wykorzystujemy również szyny CPM Ortoflex do\u00A0biernego ruchu stawu kolanowego, które przyspieszają regenerację, zapobiegają sztywności i\u00A0poprawiają zakres ruchu.',
     },
     {
         icon: UserCheck,
         title: 'Fizjoterapia manualna',
-        desc: 'Terapia tkanek miękkich i mobilizacje stawowe wykonywane przez specjalistów.',
-        details: 'Nasza kadra posiada kwalifikacje do wykonywania masażu tkanek głębokich (MTG) – metody prowadzonej świadomie, celowo i nieschematycznie. Efekty to regulacja napięcia mięśniowo-powięziowego, zwiększenie elastyczności tkanek, likwidacja punktów spustowych bólu, wzrost ruchomości w stawach i przywracanie prawidłowej postawy ciała.',
+        desc: 'Terapia tkanek miękkich i\u00A0mobilizacje stawowe wykonywane przez specjalistów.',
+        details: 'Nasza kadra posiada kwalifikacje do\u00A0wykonywania masażu tkanek głębokich (MTG) – metody prowadzonej świadomie, celowo i\u00A0nieschematycznie. Efekty to\u00A0regulacja napięcia mięśniowo-powięziowego, zwiększenie elastyczności tkanek, likwidacja punktów spustowych bólu, wzrost ruchomości w\u00A0stawach i\u00A0przywracanie prawidłowej postawy ciała.',
     },
     {
         icon: Heart,
         title: 'Masaże lecznicze',
-        desc: 'Masaż klasyczny, tkanek głębokich, gorącymi kamieniami i więcej.',
-        details: 'Oferujemy szeroki wybór masaży: klasyczny/leczniczy, relaksacyjny, powięziowy, tkanek głębokich, gorącymi kamieniami bazaltowymi oraz drenaż limfatyczny. Masaż gorącymi kamieniami to głęboko relaksująca forma terapii wykorzystująca ciepło, które rozluźnia mięśnie, poprawia krążenie i zmniejsza napięcie. Oferujemy także masaż pneumatyczno-uciskowy BOA redukujący cellulit i obrzęki.',
+        desc: 'Masaż klasyczny, tkanek głębokich, gorącymi kamieniami i\u00A0więcej.',
+        details: 'Oferujemy szeroki wybór masaży: klasyczny/leczniczy, relaksacyjny, powięziowy, tkanek głębokich, gorącymi kamieniami bazaltowymi oraz drenaż limfatyczny. Masaż gorącymi kamieniami to\u00A0głęboko relaksująca forma terapii wykorzystująca ciepło, które rozluźnia mięśnie, poprawia krążenie i\u00A0zmniejsza napięcie. Oferujemy także masaż pneumatyczno-uciskowy BOA redukujący cellulit i\u00A0obrzęki.',
     },
     {
         icon: Zap,
         title: 'Fala uderzeniowa',
-        desc: 'Skuteczna walka z przewlekłymi stanami zapalnymi i ostrogami.',
-        details: 'Nowoczesna metoda wykorzystująca impulsy akustyczne pobudzające naturalne procesy regeneracji. Leczy: ból ścięgna Achillesa, ostrogi piętowe, łokieć tenisisty/golfisty, bóle stawów barkowych i biodrowych, zapalenie powięzi podeszwowej, kolano skoczka oraz zmiany zwyrodnieniowe. Stosowana również w medycynie estetycznej – redukcja cellulitu, wygładzanie blizn i rozstępów.',
+        desc: 'Skuteczna walka z\u00A0przewlekłymi stanami zapalnymi i\u00A0ostrogami.',
+        details: 'Nowoczesna metoda wykorzystująca impulsy akustyczne pobudzające naturalne procesy regeneracji. Leczy: ból ścięgna Achillesa, ostrogi piętowe, łokieć tenisisty/golfisty, bóle stawów barkowych i\u00A0biodrowych, zapalenie powięzi podeszwowej, kolano skoczka oraz zmiany zwyrodnieniowe. Stosowana również w\u00A0medycynie estetycznej – redukcja cellulitu, wygładzanie blizn i\u00A0rozstępów.',
     },
     {
         icon: Droplets,
         title: 'Laseroterapia',
         desc: 'Laser wysokoenergetyczny przyspieszający regenerację komórkową.',
-        details: 'Laseroterapia wysokoenergetyczna i biostymulacja działają przeciwbólowo, przeciwzapalnie, przyspieszają regenerację tkanek, łagodzą bóle krzyża i choroby reumatyczne oraz wspomagają leczenie stanów pourazowych. Zabieg jest nieinwazyjny, a efekty odczuwalne praktycznie od razu – poprawa ukrwienia oraz stymulacja układu krwionośnego i limfatycznego.',
+        details: 'Laseroterapia wysokoenergetyczna i\u00A0biostymulacja działają przeciwbólowo, przeciwzapalnie, przyspieszają regenerację tkanek, łagodzą bóle krzyża i\u00A0choroby reumatyczne oraz wspomagają leczenie stanów pourazowych. Zabieg jest nieinwazyjny, a\u00A0efekty odczuwalne praktycznie od\u00A0razu – poprawa ukrwienia oraz stymulacja układu krwionośnego i\u00A0limfatycznego.',
     },
     {
         icon: ThermometerSnowflake,
         title: 'Krioterapia',
-        desc: 'Leczenie zimnem redukujące obrzęki i ból po urazach.',
-        details: 'Krioterapia wykorzystuje niską temperaturę w celach leczniczych. Działa przeciwzapalnie, przeciwbólowo i obkurczająco na naczynia krwionośne. Polecana po urazach (skręceniach, stłuczeniach, operacjach), przy bólu stawów lub mięśni, chorobach reumatycznych oraz dla sportowców potrzebujących szybszej regeneracji. Zabieg jest bezbolesny, a efekty widoczne już po pierwszej sesji.',
+        desc: 'Leczenie zimnem redukujące obrzęki i\u00A0ból po\u00A0urazach.',
+        details: 'Krioterapia wykorzystuje niską temperaturę w\u00A0celach leczniczych. Działa przeciwzapalnie, przeciwbólowo i\u00A0obkurczająco na\u00A0naczynia krwionośne. Polecana po\u00A0urazach (skręceniach, stłuczeniach, operacjach), przy bólu stawów lub mięśni, chorobach reumatycznych oraz dla sportowców potrzebujących szybszej regeneracji. Zabieg jest bezbolesny, a\u00A0efekty widoczne już po\u00A0pierwszej sesji.',
     },
     {
         icon: Ruler,
         title: 'Taping medyczny',
-        desc: 'Wspomaganie stabilizacji i drenaż limfatyczny za pomocą taśm.',
-        details: 'Taping (plastrowanie dynamiczne) to elastyczne taśmy wspierające regenerację, zmniejszające ból, poprawiające stabilizację mięśni i stawów oraz usprawniające drenaż limfatyczny. Oferujemy taping limfatyczny przeciwobrzękowy, który naciąga skórę umożliwiając chłonce szybszy przepływ, poprawia mikrokrążenie i stymuluje regenerację. Sprawdza się u sportowców, po urazach, operacjach i przy pracy siedzącej.',
+        desc: 'Wspomaganie stabilizacji i\u00A0drenaż limfatyczny za\u00A0pomocą taśm.',
+        details: 'Taping (plastrowanie dynamiczne) to\u00A0elastyczne taśmy wspierające regenerację, zmniejszające ból, poprawiające stabilizację mięśni i\u00A0stawów oraz usprawniające drenaż limfatyczny. Oferujemy taping limfatyczny przeciwobrzękowy, który naciąga skórę umożliwiając chłonce szybszy przepływ, poprawia mikrokrążenie i\u00A0stymuluje regenerację. Sprawdza się\u00A0u\u00A0sportowców, po\u00A0urazach, operacjach i\u00A0przy pracy siedzącej.',
     },
     {
         icon: Waves,
         title: 'Hydroterapia',
-        desc: 'Lecznicze kąpiele wirowe poprawiające krążenie i zakres ruchu.',
-        details: 'Posiadamy wannę do hydroterapii całego ciała oraz stanowisko do masażu wirowego rąk i nóg. Woda odciąża ciało, dzięki czemu ćwiczenia są bezpieczniejsze i mniej bolesne – idealna metoda po urazach, operacjach i przy chorobach stawów. Regularne sesje wspierają krążenie, przyspieszają regenerację i poprawiają samopoczucie. Pomieszczenia i urządzenia są zawsze sterylnie czyste.',
+        desc: 'Lecznicze kąpiele wirowe poprawiające krążenie i\u00A0zakres ruchu.',
+        details: 'Posiadamy wannę do\u00A0hydroterapii całego ciała oraz stanowisko do\u00A0masażu wirowego rąk i\u00A0nóg. Woda odciąża ciało, dzięki czemu ćwiczenia są bezpieczniejsze i\u00A0mniej bolesne – idealna metoda po\u00A0urazach, operacjach i\u00A0przy chorobach stawów. Regularne sesje wspierają krążenie, przyspieszają regenerację i\u00A0poprawiają samopoczucie. Pomieszczenia i\u00A0urządzenia są zawsze sterylnie czyste.',
     },
 ];
 
@@ -160,7 +160,7 @@ const Services = () => {
                 <div style={{ textAlign: 'center', marginBottom: '64px' }}>
                     <span style={{ color: '#598BBC', textTransform: 'uppercase', letterSpacing: '0.1em', fontWeight: 700, fontSize: '0.75rem', marginBottom: '12px', display: 'block' }}>Specjalistyczna Oferta</span>
                     <h2 style={{ color: '#2C3034', fontSize: '3rem', marginBottom: '16px' }}>Nasze Usługi</h2>
-                    <p style={{ color: '#444A56', maxWidth: '42rem', margin: '0 auto' }}>Najnowocześniejszy sprzęt i doświadczeni terapeuci to podstawa skuteczności naszych zabiegów.</p>
+                    <p style={{ color: '#444A56', maxWidth: '42rem', margin: '0 auto' }}>Najnowocześniejszy sprzęt i{'\u00A0'}doświadczeni terapeuci to{'\u00A0'}podstawa skuteczności naszych zabiegów.</p>
                 </div>
 
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '32px' }}>
@@ -192,7 +192,7 @@ const Services = () => {
                             <h3 style={{ fontSize: '1.25rem', fontWeight: 700, color: '#2C3034', marginBottom: '16px' }}>{service.title}</h3>
                             <p style={{ color: '#444A56', lineHeight: 1.6, fontSize: '0.875rem', marginBottom: '16px' }}>{service.desc}</p>
                             <span style={{ color: '#CFA714', fontWeight: 600, fontSize: '0.85rem', display: 'inline-flex', alignItems: 'center', gap: '4px' }}>
-                                Dowiedz się więcej <ChevronRight size={16} />
+                                Dowiedz się{'\u00A0'}więcej <ChevronRight size={16} />
                             </span>
                         </motion.div>
                     ))}

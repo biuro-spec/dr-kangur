@@ -39,7 +39,7 @@ const Hero = () => {
                             marginBottom: '16px',
                             display: 'block',
                         }}>
-                            Rehabilitacja i Fizjoterapia Głubczyce
+                            Rehabilitacja i{'\u00A0'}Fizjoterapia Głubczyce
                         </span>
                         <h1 style={{
                             color: '#2C3034',
@@ -47,7 +47,7 @@ const Hero = () => {
                             marginBottom: '24px',
                             lineHeight: 0.95,
                         }}>
-                            Powrót do <span style={{ color: '#CFA714' }}>sprawności</span> zaczyna się tutaj
+                            Powrót do{'\u00A0'}<span style={{ color: '#CFA714' }}>sprawności</span> zaczyna się{'\u00A0'}tutaj
                         </h1>
                         <p style={{
                             color: '#444A56',
@@ -56,7 +56,7 @@ const Hero = () => {
                             maxWidth: '500px',
                             lineHeight: 1.7,
                         }}>
-                            Profesjonalna rehabilitacja i fizjoterapia pomagająca wrócić do zdrowia po urazach, operacjach i przewlekłym bólu.
+                            Profesjonalna rehabilitacja i{'\u00A0'}fizjoterapia pomagająca wrócić do{'\u00A0'}zdrowia po{'\u00A0'}urazach, operacjach i{'\u00A0'}przewlekłym bólu.
                         </p>
                         <div style={{ display: 'flex', flexWrap: 'wrap', gap: '16px' }}>
                             <a href="#contact" className="btn-premium" style={{ padding: '16px 36px', fontSize: '1.05rem' }}>

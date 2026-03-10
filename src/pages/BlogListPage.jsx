@@ -15,7 +15,7 @@ const BlogListPage = () => {
 
     useEffect(() => {
         resetMetaTags();
-        document.title = 'Blog o Rehabilitacji | DR KANGUR';
+        document.title = 'Blog o\u00A0Rehabilitacji | DR KANGUR';
 
         const handleScroll = () => setScrolled(window.scrollY > 50);
         window.addEventListener('scroll', handleScroll);
@@ -92,7 +92,7 @@ const BlogListPage = () => {
                             marginBottom: '16px',
                             lineHeight: 1.1,
                         }}>
-                            Blog o <span style={{ color: '#E5C14B' }}>Rehabilitacji</span>
+                            Blog o{'\u00A0'}<span style={{ color: '#E5C14B' }}>Rehabilitacji</span>
                         </h1>
                         <p style={{
                             color: 'rgba(255,255,255,0.8)',
@@ -100,7 +100,7 @@ const BlogListPage = () => {
                             lineHeight: 1.6,
                             marginBottom: '40px',
                         }}>
-                            Wiedza ekspercka o fizjoterapii, rehabilitacji i zdrowiu. Poradniki, wskazówki i nowoczesne metody leczenia.
+                            Wiedza ekspercka o{'\u00A0'}fizjoterapii, rehabilitacji i{'\u00A0'}zdrowiu. Poradniki, wskazówki i{'\u00A0'}nowoczesne metody leczenia.
                         </p>
 
                         {/* Search */}
