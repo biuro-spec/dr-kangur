@@ -416,18 +416,20 @@ const Contact = () => {
 
             {/* Styles */}
             <style>{`
-                .contact-info-card:hover {
-                    transform: translateY(-2px);
-                    box-shadow: 0 8px 30px rgba(44, 48, 52, 0.08) !important;
-                    border-color: rgba(89, 139, 188, 0.15) !important;
-                }
-                .contact-submit-btn:hover {
-                    transform: translateY(-2px);
-                    box-shadow: 0 12px 35px rgba(207, 167, 20, 0.35) !important;
-                }
-                .navigate-btn:hover {
-                    transform: translateY(-3px);
-                    box-shadow: 0 12px 35px rgba(89, 139, 188, 0.35) !important;
+                @media (hover: hover) {
+                    .contact-info-card:hover {
+                        transform: translateY(-2px);
+                        box-shadow: 0 8px 30px rgba(44, 48, 52, 0.08) !important;
+                        border-color: rgba(89, 139, 188, 0.15) !important;
+                    }
+                    .contact-submit-btn:hover {
+                        transform: translateY(-2px);
+                        box-shadow: 0 12px 35px rgba(207, 167, 20, 0.35) !important;
+                    }
+                    .navigate-btn:hover {
+                        transform: translateY(-3px);
+                        box-shadow: 0 12px 35px rgba(89, 139, 188, 0.35) !important;
+                    }
                 }
                 @media (max-width: 768px) {
                     #contact {

@@ -104,9 +104,11 @@ h4 {
     gap: 10px;
 }
 
-.btn-premium:hover {
-    transform: translateY(-4px) scale(1.02);
-    box-shadow: 0 15px 40px rgba(207, 167, 20, 0.3);
+@media (hover: hover) {
+    .btn-premium:hover {
+        transform: translateY(-4px) scale(1.02);
+        box-shadow: 0 15px 40px rgba(207, 167, 20, 0.3);
+    }
 }
 
 .card-premium {
@@ -140,21 +142,22 @@ h4 {
     opacity: 0;
 }
 
-.card-premium:hover::after {
-    opacity: 1;
-    animation: shining 0.7s ease-in-out;
+@media (hover: hover) {
+    .card-premium:hover::after {
+        opacity: 1;
+        animation: shining 0.7s ease-in-out;
+    }
+    .card-premium:hover {
+        transform: translateY(-10px);
+        box-shadow: var(--shadow-hover);
+        border-color: rgba(207, 167, 20, 0.2);
+        transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.5s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    }
 }
 
 @keyframes shining {
     0% { left: -100%; }
     100% { left: 150%; }
-}
-
-.card-premium:hover {
-    transform: translateY(-10px);
-    box-shadow: var(--shadow-hover);
-    border-color: rgba(207, 167, 20, 0.2);
-    transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.5s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .glass {

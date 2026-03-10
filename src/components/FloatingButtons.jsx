@@ -78,14 +78,16 @@ const FloatingButtons = () => {
                     0%, 100% { box-shadow: 0 8px 30px rgba(207, 167, 20, 0.4); }
                     50% { box-shadow: 0 8px 40px rgba(207, 167, 20, 0.6), 0 0 0 12px rgba(207, 167, 20, 0.1); }
                 }
-                .floating-btn:hover {
-                    transform: translateY(-4px) scale(1.1) !important;
-                }
-                .floating-scroll-top:hover {
-                    box-shadow: 0 12px 40px rgba(89, 139, 188, 0.5) !important;
-                }
-                .floating-phone:hover {
-                    box-shadow: 0 12px 40px rgba(207, 167, 20, 0.5) !important;
+                @media (hover: hover) {
+                    .floating-btn:hover {
+                        transform: translateY(-4px) scale(1.1) !important;
+                    }
+                    .floating-scroll-top:hover {
+                        box-shadow: 0 12px 40px rgba(89, 139, 188, 0.5) !important;
+                    }
+                    .floating-phone:hover {
+                        box-shadow: 0 12px 40px rgba(207, 167, 20, 0.5) !important;
+                    }
                 }
                 @media (min-width: 1024px) {
                     .floating-phone {
