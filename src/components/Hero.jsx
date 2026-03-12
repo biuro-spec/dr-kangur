@@ -98,20 +98,23 @@ const Hero = () => {
                             zIndex: 20,
                             maxHeight: '520px',
                         }}>
-                            <img
-                                src="/clinic_room.webp"
-                                loading="eager"
-                                decoding="async"
-                                alt="Gabinet Fizjoterapii Dr Kangur"
-                                width="800"
-                                height="520"
-                                style={{
-                                    width: '100%',
-                                    height: '520px',
-                                    objectFit: 'cover',
-                                    display: 'block',
-                                }}
-                            />
+                            <picture>
+                                <source media="(max-width: 768px)" srcSet="/clinic_room-mobile.webp" />
+                                <img
+                                    src="/clinic_room.webp"
+                                    loading="eager"
+                                    decoding="async"
+                                    alt="Gabinet Fizjoterapii Dr Kangur"
+                                    width="800"
+                                    height="520"
+                                    style={{
+                                        width: '100%',
+                                        height: '520px',
+                                        objectFit: 'cover',
+                                        display: 'block',
+                                    }}
+                                />
+                            </picture>
                         </div>
 
                         {/* Decorative Blobs */}

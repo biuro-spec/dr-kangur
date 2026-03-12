@@ -58,20 +58,23 @@ const About = () => {
                             position: 'relative',
                             zIndex: 2,
                         }}>
-                            <img
-                                src="/clinic_gym.webp"
-                                loading="lazy"
-                                decoding="async"
-                                alt="Sala ćwiczeń Dr Kangur"
-                                width="800"
-                                height="480"
-                                style={{
-                                    width: '100%',
-                                    height: '480px',
-                                    objectFit: 'cover',
-                                    display: 'block',
-                                }}
-                            />
+                            <picture>
+                                <source media="(max-width: 768px)" srcSet="/clinic_gym-mobile.webp" />
+                                <img
+                                    src="/clinic_gym.webp"
+                                    loading="lazy"
+                                    decoding="async"
+                                    alt="Sala ćwiczeń Dr Kangur"
+                                    width="800"
+                                    height="480"
+                                    style={{
+                                        width: '100%',
+                                        height: '480px',
+                                        objectFit: 'cover',
+                                        display: 'block',
+                                    }}
+                                />
+                            </picture>
                             {/* Gradient overlay at bottom */}
                             <div style={{
                                 position: 'absolute',
