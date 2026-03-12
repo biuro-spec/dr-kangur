@@ -106,7 +106,7 @@ export default function CookieConsent() {
                             </div>
                             <h3>Ty kontrolujesz swoje dane</h3>
                         </div>
-                        <button className="cookie-modal-close" onClick={() => {
+                        <button className="cookie-modal-close" aria-label="Zamknij" onClick={() => {
                             if (!localStorage.getItem('drkangur_cookie_consent')) {
                                 setShowBanner(true);
                             }
@@ -132,7 +132,7 @@ export default function CookieConsent() {
                                         <span className="cookie-badge always-active">Zawsze aktywne</span>
                                     </div>
                                     <label className="cookie-switch disabled">
-                                        <input type="checkbox" checked={preferences.necessary} disabled />
+                                        <input type="checkbox" checked={preferences.necessary} disabled aria-label="Absolutnie niezbędne" />
                                         <span className="cookie-slider"></span>
                                     </label>
                                 </div>
@@ -153,6 +153,7 @@ export default function CookieConsent() {
                                             type="checkbox"
                                             checked={preferences.functional}
                                             onChange={() => togglePreference('functional')}
+                                            aria-label="Funkcjonalne"
                                         />
                                         <span className="cookie-slider"></span>
                                     </label>
@@ -174,6 +175,7 @@ export default function CookieConsent() {
                                             type="checkbox"
                                             checked={preferences.statistical}
                                             onChange={() => togglePreference('statistical')}
+                                            aria-label="Statystyka"
                                         />
                                         <span className="cookie-slider"></span>
                                     </label>
@@ -195,6 +197,7 @@ export default function CookieConsent() {
                                             type="checkbox"
                                             checked={preferences.marketing}
                                             onChange={() => togglePreference('marketing')}
+                                            aria-label="Reklamy"
                                         />
                                         <span className="cookie-slider"></span>
                                     </label>
