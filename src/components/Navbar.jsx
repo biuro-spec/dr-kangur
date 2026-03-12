@@ -102,6 +102,9 @@ const Navbar = ({ scrolled }) => {
                         <img
                             src="/dr_kangur_logo.webp"
                             alt="Dr Kangur"
+                            decoding="async"
+                            width="132"
+                            height="160"
                             style={{
                                 position: 'absolute',
                                 top: 0,
@@ -120,6 +123,9 @@ const Navbar = ({ scrolled }) => {
                         <img
                             src="/dr_kangur_icon.webp"
                             alt="Dr Kangur"
+                            decoding="async"
+                            width="52"
+                            height="52"
                             style={{
                                 position: 'absolute',
                                 top: 0,

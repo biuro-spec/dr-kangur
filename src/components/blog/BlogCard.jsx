@@ -2,11 +2,9 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Clock, ArrowRight } from 'lucide-react';
-import * as LucideIcons from 'lucide-react';
 import { formatDate } from '../../utils/seo';
 
 const BlogCard = ({ article, index }) => {
-    const IconComponent = LucideIcons[article.icon] || LucideIcons.FileText;
 
     return (
         <motion.div

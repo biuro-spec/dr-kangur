@@ -61,7 +61,10 @@ const About = () => {
                             <img
                                 src="/clinic_gym.webp"
                                 loading="lazy"
+                                decoding="async"
                                 alt="Sala ćwiczeń Dr Kangur"
+                                width="800"
+                                height="480"
                                 style={{
                                     width: '100%',
                                     height: '480px',

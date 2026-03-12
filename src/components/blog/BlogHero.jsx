@@ -1,11 +1,12 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import * as LucideIcons from 'lucide-react';
-import { Clock, User, Calendar } from 'lucide-react';
+import { Clock, User, Calendar, Activity, Bone, Heart, Hand, Zap, Dumbbell, Footprints, Stethoscope, Bandage, ShieldCheck, Snowflake, FileText } from 'lucide-react';
 import { formatDate } from '../../utils/seo';
 
+const ICON_MAP = { Activity, Bone, Heart, Hand, Zap, Dumbbell, Footprints, Stethoscope, Bandage, ShieldCheck, Snowflake, FileText };
+
 const BlogHero = ({ article }) => {
-    const IconComponent = LucideIcons[article.icon] || LucideIcons.FileText;
+    const IconComponent = ICON_MAP[article.icon] || FileText;
 
     return (
         <section className="blog-hero" style={{
