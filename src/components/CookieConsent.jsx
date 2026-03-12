@@ -294,7 +294,7 @@ export default function CookieConsent() {
 
                         <h4>7. Pliki Cookie</h4>
                         <p>
-                            Strona internetowa drkangur.pl wykorzystuje pliki cookie w celu zapewnienia prawidłowego
+                            Strona internetowa dr-kangur.pl wykorzystuje pliki cookie w celu zapewnienia prawidłowego
                             działania witryny, analizy ruchu oraz personalizacji treści. Szczegółowe informacje o
                             wykorzystywanych plikach cookie znajdują się w zakładce „Szczegóły plików cookie" w
                             ustawieniach prywatności.
@@ -305,7 +305,7 @@ export default function CookieConsent() {
                             We wszystkich sprawach związanych z ochroną danych osobowych prosimy o kontakt:
                         </p>
                         <ul>
-                            <li>E-mail: <strong>kontakt@drkangur.pl</strong></li>
+                            <li>E-mail: <strong>kontakt@dr-kangur.pl</strong></li>
                             <li>Telefon: <strong>784 565 994</strong></li>
                             <li>Adres: DR KANGUR, ul. Bolesława Chrobrego 16, 48-100 Głubczyce</li>
                         </ul>

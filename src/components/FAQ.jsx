@@ -10,7 +10,7 @@ const faqs = [
     },
     {
         question: 'Jak mogę umówić się na\u00A0wizytę?',
-        answer: 'Najprościej zadzwonić pod numer 784 565 994 w\u00A0godzinach 8:00 - 18:00 (poniedziałek - piątek). Można też wysłać wiadomość przez formularz na\u00A0naszej stronie lub napisać na\u00A0adres kontakt@drkangur.pl.'
+        answer: 'Najprościej zadzwonić pod numer 784 565 994 w\u00A0godzinach 8:00 - 18:00 (poniedziałek - piątek). Można też wysłać wiadomość przez formularz na\u00A0naszej stronie lub napisać na\u00A0adres kontakt@dr-kangur.pl.'
     },
     {
         question: 'Czy potrzebuję skierowania?',

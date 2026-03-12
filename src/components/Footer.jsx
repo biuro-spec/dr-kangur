@@ -194,7 +194,7 @@ const Footer = () => {
                                 >
                                     <Phone size={16} /> 784 565 994
                                 </a>
-                                <a href="mailto:kontakt@drkangur.pl" style={{
+                                <a href="mailto:kontakt@dr-kangur.pl" style={{
                                     display: 'flex', alignItems: 'center', gap: '10px',
                                     color: 'rgba(255,255,255,0.85)', textDecoration: 'none', fontSize: '0.9rem',
                                     transition: 'color 0.2s',
@@ -202,7 +202,7 @@ const Footer = () => {
                                     onMouseEnter={(e) => e.currentTarget.style.color = 'white'}
                                     onMouseLeave={(e) => e.currentTarget.style.color = 'rgba(255,255,255,0.85)'}
                                 >
-                                    <Mail size={16} /> kontakt@drkangur.pl
+                                    <Mail size={16} /> kontakt@dr-kangur.pl
                                 </a>
                                 <div style={{
                                     display: 'flex', alignItems: 'flex-start', gap: '10px',

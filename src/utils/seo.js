@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 
-const SITE_URL = 'https://drkangur.pl';
+const SITE_URL = 'https://dr-kangur.pl';
 
 const updateMetaTag = (name, content, attr = 'name') => {
     let element = document.querySelector(`meta[${attr}="${name}"]`);

@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /assets/
 
-Sitemap: https://drkangur.pl/sitemap.xml
+Sitemap: https://dr-kangur.pl/sitemap.xml

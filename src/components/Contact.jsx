@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
 import { MapPin, Phone, Mail, Clock, AlertCircle, CheckCircle2, ArrowUpRight, Send, Navigation } from 'lucide-react';
 
 const Contact = () => {
@@ -87,8 +86,8 @@ const Contact = () => {
         {
             icon: Mail,
             title: 'E-mail',
-            content: 'kontakt@drkangur.pl',
-            href: 'mailto:kontakt@drkangur.pl',
+            content: 'kontakt@dr-kangur.pl',
+            href: 'mailto:kontakt@dr-kangur.pl',
         },
         {
             icon: Clock,
@@ -123,13 +122,7 @@ const Contact = () => {
 
             <div style={{ maxWidth: '1300px', margin: '0 auto', padding: '0 32px', position: 'relative', zIndex: 2 }}>
                 {/* Section header */}
-                <motion.div
-                    initial={{ opacity: 0, y: 12 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.4 }}
-                    viewport={{ once: true }}
-                    style={{ textAlign: 'center', marginBottom: '64px' }}
-                >
+                <div style={{ textAlign: 'center', marginBottom: '64px' }}>
                     <span style={{ color: '#598BBC', textTransform: 'uppercase', letterSpacing: '0.15em', fontWeight: 700, fontSize: '0.75rem', marginBottom: '12px', display: 'block' }}>
                         Skontaktuj się z{'\u00A0'}nami
                     </span>
@@ -139,7 +132,7 @@ const Contact = () => {
                     <p style={{ color: '#444A56', maxWidth: '42rem', margin: '0 auto' }}>
                         Skontaktuj się z{'\u00A0'}nami telefonicznie lub wypełnij formularz – oddzwonimy najszybciej jak to{'\u00A0'}możliwe.
                     </p>
-                </motion.div>
+                </div>
 
                 <div className="contact-grid" style={{
                     display: 'grid',
@@ -148,20 +141,11 @@ const Contact = () => {
                     alignItems: 'start',
                 }}>
                     {/* Left column - Contact info */}
-                    <motion.div
-                        initial={{ opacity: 0, y: 15 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.5 }}
-                        viewport={{ once: true }}
-                    >
+                    <div>
                         <div style={{ display: 'flex', flexDirection: 'column', gap: '16px', marginBottom: '32px' }}>
-                            {contactItems.map((item, i) => (
-                                <motion.div
+                            {contactItems.map((item) => (
+                                <div
                                     key={item.title}
-                                    initial={{ opacity: 0, y: 10 }}
-                                    whileInView={{ opacity: 1, y: 0 }}
-                                    transition={{ delay: i * 0.06, duration: 0.4, ease: 'easeOut' }}
-                                    viewport={{ once: true, amount: 0.15 }}
                                     className="contact-info-card"
                                     style={{
                                         display: 'flex',
@@ -210,17 +194,12 @@ const Contact = () => {
                                     {item.href && (
                                         <ArrowUpRight size={18} color="#598BBC" style={{ opacity: 0.4 }} />
                                     )}
-                                </motion.div>
+                                </div>
                             ))}
                         </div>
 
                         {/* Google Map */}
-                        <motion.div
-                            initial={{ opacity: 0, y: 12 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            transition={{ delay: 0.1, duration: 0.4 }}
-                            viewport={{ once: true }}
-                            style={{
+                        <div style={{
                                 borderRadius: '24px',
                                 overflow: 'hidden',
                                 border: '1px solid rgba(0, 0, 0, 0.04)',
@@ -235,7 +214,7 @@ const Contact = () => {
                                 sandbox="allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"
                                 referrerPolicy="no-referrer"
                             ></iframe>
-                        </motion.div>
+                        </div>
 
                         {/* Navigate button */}
                         <a
@@ -263,15 +242,10 @@ const Contact = () => {
                             <Navigation size={18} />
                             Nawiguj do{'\u00A0'}nas
                         </a>
-                    </motion.div>
+                    </div>
 
                     {/* Right column - Form */}
-                    <motion.div
-                        initial={{ opacity: 0, y: 15 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.5, delay: 0.1 }}
-                        viewport={{ once: true }}
-                        style={{
+                    <div style={{
                             background: 'linear-gradient(145deg, rgba(89, 139, 188, 0.06) 0%, rgba(59, 108, 181, 0.1) 100%)',
                             padding: '40px',
                             borderRadius: '32px',
@@ -410,7 +384,7 @@ const Contact = () => {
                                 Oddzwonimy w{'\u00A0'}ciągu 24h w{'\u00A0'}dni robocze.
                             </p>
                         </form>
-                    </motion.div>
+                    </div>
                 </div>
             </div>
 
