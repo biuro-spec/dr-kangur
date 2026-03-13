@@ -101,7 +101,7 @@ const Stats = () => {
                                     <stat.Icon size={26} color="#CFA714" />
                                 </div>
                             </motion.div>
-                            <h3 style={{
+                            <p style={{
                                 color: 'white',
                                 fontSize: '2.75rem',
                                 fontWeight: 800,
@@ -111,7 +111,7 @@ const Stats = () => {
                                 textShadow: '0 2px 10px rgba(0,0,0,0.15)',
                             }}>
                                 {stat.value}
-                            </h3>
+                            </p>
                             <p style={{
                                 color: 'rgba(255,255,255,0.75)',
                                 fontSize: '0.875rem',

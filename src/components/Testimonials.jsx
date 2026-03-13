@@ -143,7 +143,7 @@ const Testimonials = () => {
                                 </p>
                                 <span style={{
                                     background: 'rgba(207, 167, 20, 0.08)',
-                                    color: '#996F00',
+                                    color: '#7A5F00',
                                     padding: '4px 16px',
                                     borderRadius: '100px',
                                     fontSize: '0.8rem',

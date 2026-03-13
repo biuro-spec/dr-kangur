@@ -107,9 +107,9 @@ const Gallery = () => {
                                 }}>
                                     {item.category}
                                 </span>
-                                <h4 style={{ color: 'white', fontSize: '1.2rem', fontWeight: 700 }}>
+                                <p style={{ color: 'white', fontSize: '1.2rem', fontWeight: 700 }}>
                                     {item.title}
-                                </h4>
+                                </p>
                             </div>
                             {/* Zoom icon on hover */}
                             <div style={{
