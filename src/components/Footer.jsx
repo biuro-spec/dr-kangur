@@ -120,7 +120,7 @@ const Footer = () => {
                                 alignItems: 'center',
                                 gap: '10px',
                                 background: 'white',
-                                color: '#CFA714',
+                                color: '#7A5F00',
                                 padding: '16px 36px',
                                 borderRadius: '100px',
                                 fontWeight: 700,
