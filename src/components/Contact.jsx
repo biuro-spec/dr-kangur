@@ -178,7 +178,7 @@ const Contact = () => {
                                         </div>
                                         {item.href ? (
                                             <a href={item.href} style={{
-                                                color: item.highlight ? '#CFA714' : '#2C3034',
+                                                color: item.highlight ? '#996F00' : '#2C3034',
                                                 textDecoration: 'none',
                                                 fontWeight: 700,
                                                 fontSize: item.highlight ? '1.15rem' : '0.95rem',

@@ -179,23 +179,34 @@ const Testimonials = () => {
                             <ChevronLeft size={20} />
                         </button>
 
-                        <div style={{ display: 'flex', gap: '8px' }}>
+                        <div style={{ display: 'flex', gap: '0px' }}>
                             {testimonials.map((_, i) => (
                                 <button
                                     key={i}
                                     onClick={() => { setDirection(i > current ? 1 : -1); setCurrent(i); }}
                                     aria-label={`Opinia ${i + 1}`}
                                     style={{
-                                        width: i === current ? '32px' : '10px',
-                                        height: '10px',
-                                        borderRadius: '100px',
-                                        background: i === current ? '#CFA714' : '#e5e7eb',
+                                        width: '48px',
+                                        height: '48px',
                                         border: 'none',
                                         cursor: 'pointer',
                                         transition: 'all 0.3s',
                                         padding: 0,
+                                        background: 'transparent',
+                                        display: 'flex',
+                                        alignItems: 'center',
+                                        justifyContent: 'center',
                                     }}
-                                />
+                                >
+                                    <span style={{
+                                        width: i === current ? '32px' : '10px',
+                                        height: '10px',
+                                        borderRadius: '100px',
+                                        background: i === current ? '#CFA714' : '#e5e7eb',
+                                        transition: 'all 0.3s',
+                                        display: 'block',
+                                    }} />
+                                </button>
                             ))}
                         </div>
 
