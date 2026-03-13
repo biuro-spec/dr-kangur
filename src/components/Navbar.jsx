@@ -100,7 +100,7 @@ const Navbar = ({ scrolled }) => {
                     }}>
                         {/* Full logo with text — visible at top */}
                         <img
-                            src="/dr_kangur_logo.webp"
+                            src="/dr_kangur_logo_small.webp"
                             alt="Dr Kangur"
                             decoding="async"
                             width="132"
