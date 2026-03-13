@@ -159,6 +159,7 @@ const Testimonials = () => {
                     <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '24px', marginTop: '32px' }}>
                         <button
                             onClick={prev}
+                            aria-label="Poprzednia opinia"
                             style={{
                                 width: '48px',
                                 height: '48px',
@@ -183,6 +184,7 @@ const Testimonials = () => {
                                 <button
                                     key={i}
                                     onClick={() => { setDirection(i > current ? 1 : -1); setCurrent(i); }}
+                                    aria-label={`Opinia ${i + 1}`}
                                     style={{
                                         width: i === current ? '32px' : '10px',
                                         height: '10px',
@@ -199,6 +201,7 @@ const Testimonials = () => {
 
                         <button
                             onClick={next}
+                            aria-label="Następna opinia"
                             style={{
                                 width: '48px',
                                 height: '48px',

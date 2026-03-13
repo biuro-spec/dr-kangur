@@ -211,6 +211,7 @@ const ModalContent = ({ service, onClose, contentRef }) => {
                     {/* Close button */}
                     <button
                         onClick={onClose}
+                        aria-label="Zamknij"
                         style={{
                             position: 'absolute',
                             top: '16px',

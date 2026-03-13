@@ -155,6 +155,7 @@ const Gallery = () => {
                     >
                         <button
                             onClick={() => setSelected(null)}
+                            aria-label="Zamknij galerię"
                             style={{
                                 position: 'absolute',
                                 top: '24px',
