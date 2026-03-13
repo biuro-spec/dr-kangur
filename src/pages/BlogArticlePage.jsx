@@ -79,16 +79,16 @@ const BlogArticlePage = () => {
             <div className="blog-breadcrumbs" style={{ background: '#f8f9fa', padding: '16px 0', borderBottom: '1px solid #eee' }}>
                 <div className="container" style={{ maxWidth: '1300px', margin: '0 auto', padding: '0 32px' }}>
                     <nav style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.85rem', flexWrap: 'wrap' }}>
-                        <Link to="/" style={{ color: '#598BBC', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '4px' }}>
+                        <Link to="/" style={{ color: '#3d6f99', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '4px' }}>
                             <Home size={14} />
                             Strona główna
                         </Link>
                         <ChevronRight size={14} color="#999" />
-                        <Link to="/blog" style={{ color: '#598BBC', textDecoration: 'none' }}>
+                        <Link to="/blog" style={{ color: '#3d6f99', textDecoration: 'none' }}>
                             Blog
                         </Link>
                         <ChevronRight size={14} color="#999" />
-                        <span style={{ color: '#999' }}>{article.title}</span>
+                        <span style={{ color: '#767676' }}>{article.title}</span>
                     </nav>
                 </div>
             </div>

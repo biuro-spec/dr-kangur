@@ -36,11 +36,11 @@ const Gallery = () => {
         <section id="gallery" style={{ padding: '96px 0', background: '#f1f3f5' }}>
             <div className="container" style={{ maxWidth: '1300px', margin: '0 auto', padding: '0 32px' }}>
                 <div style={{ textAlign: 'center', marginBottom: '64px' }}>
-                    <span style={{ color: '#598BBC', textTransform: 'uppercase', letterSpacing: '0.1em', fontWeight: 700, fontSize: '0.75rem', marginBottom: '12px', display: 'block' }}>
+                    <span style={{ color: '#3d6f99', textTransform: 'uppercase', letterSpacing: '0.1em', fontWeight: 700, fontSize: '0.75rem', marginBottom: '12px', display: 'block' }}>
                         Nasze wnętrza
                     </span>
                     <h2 style={{ color: '#2C3034', fontSize: '3rem', marginBottom: '16px' }}>
-                        Galeria <span style={{ color: '#CFA714' }}>gabinetu</span>
+                        Galeria <span style={{ color: '#996F00' }}>gabinetu</span>
                     </h2>
                     <p style={{ color: '#444A56', maxWidth: '42rem', margin: '0 auto' }}>
                         Nowoczesne wnętrza i{'\u00A0'}profesjonalny sprzęt — u{'\u00A0'}nas czujesz się komfortowo od{'\u00A0'}pierwszej wizyty.

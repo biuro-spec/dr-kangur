@@ -10,7 +10,7 @@ const RelatedArticles = ({ articles }) => {
             <div className="container" style={{ maxWidth: '1300px', margin: '0 auto', padding: '0 32px' }}>
                 <div style={{ textAlign: 'center', marginBottom: '48px' }}>
                     <span style={{
-                        color: '#598BBC',
+                        color: '#3d6f99',
                         textTransform: 'uppercase',
                         letterSpacing: '0.1em',
                         fontWeight: 700,
@@ -26,7 +26,7 @@ const RelatedArticles = ({ articles }) => {
                         fontWeight: 800,
                         color: '#2C3034',
                     }}>
-                        Powiązane <span style={{ color: '#CFA714' }}>artykuły</span>
+                        Powiązane <span style={{ color: '#996F00' }}>artykuły</span>
                     </h2>
                 </div>
 

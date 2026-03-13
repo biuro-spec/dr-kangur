@@ -114,7 +114,7 @@ const BlogListPage = () => {
                                 left: '20px',
                                 top: '50%',
                                 transform: 'translateY(-50%)',
-                                color: '#999',
+                                color: '#767676',
                             }} />
                             <input
                                 type="text"
@@ -143,7 +143,7 @@ const BlogListPage = () => {
                                         background: 'none',
                                         border: 'none',
                                         cursor: 'pointer',
-                                        color: '#999',
+                                        color: '#767676',
                                         display: 'flex',
                                     }}
                                 >
@@ -220,7 +220,7 @@ const BlogListPage = () => {
                         </div>
                     ) : (
                         <div style={{ textAlign: 'center', padding: '80px 0' }}>
-                            <p style={{ color: '#999', fontSize: '1.1rem' }}>
+                            <p style={{ color: '#767676', fontSize: '1.1rem' }}>
                                 Nie znaleziono artykułów dla "{search || activeCategory}"
                             </p>
                             <button

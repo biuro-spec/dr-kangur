@@ -158,7 +158,7 @@ const Services = () => {
         <section className="py-24 bg-[#f1f3f5]" id="services" style={{ padding: '96px 0', background: '#f1f3f5' }}>
             <div className="container mx-auto px-6">
                 <div style={{ textAlign: 'center', marginBottom: '64px' }}>
-                    <span style={{ color: '#598BBC', textTransform: 'uppercase', letterSpacing: '0.1em', fontWeight: 700, fontSize: '0.75rem', marginBottom: '12px', display: 'block' }}>Specjalistyczna Oferta</span>
+                    <span style={{ color: '#3d6f99', textTransform: 'uppercase', letterSpacing: '0.1em', fontWeight: 700, fontSize: '0.75rem', marginBottom: '12px', display: 'block' }}>Specjalistyczna Oferta</span>
                     <h2 style={{ color: '#2C3034', fontSize: '3rem', marginBottom: '16px' }}>Nasze Usługi</h2>
                     <p style={{ color: '#444A56', maxWidth: '42rem', margin: '0 auto' }}>Najnowocześniejszy sprzęt i{'\u00A0'}doświadczeni terapeuci to{'\u00A0'}podstawa skuteczności naszych zabiegów.</p>
                 </div>
@@ -191,7 +191,7 @@ const Services = () => {
                             </div>
                             <h3 style={{ fontSize: '1.25rem', fontWeight: 700, color: '#2C3034', marginBottom: '16px' }}>{service.title}</h3>
                             <p style={{ color: '#444A56', lineHeight: 1.6, fontSize: '0.875rem', marginBottom: '16px' }}>{service.desc}</p>
-                            <span style={{ color: '#CFA714', fontWeight: 600, fontSize: '0.85rem', display: 'inline-flex', alignItems: 'center', gap: '4px' }}>
+                            <span style={{ color: '#996F00', fontWeight: 600, fontSize: '0.85rem', display: 'inline-flex', alignItems: 'center', gap: '4px' }}>
                                 Dowiedz się{'\u00A0'}więcej <ChevronRight size={16} />
                             </span>
                         </motion.div>

@@ -47,7 +47,7 @@ const BlogSidebar = ({ content }) => {
                                 }}
                                 onMouseEnter={(e) => {
                                     e.target.style.background = 'rgba(207, 167, 20, 0.08)';
-                                    e.target.style.color = '#CFA714';
+                                    e.target.style.color = '#996F00';
                                 }}
                                 onMouseLeave={(e) => {
                                     e.target.style.background = 'transparent';
@@ -95,7 +95,7 @@ const BlogSidebar = ({ content }) => {
                         justifyContent: 'center',
                         gap: '8px',
                         background: 'white',
-                        color: '#CFA714',
+                        color: '#996F00',
                         padding: '14px 24px',
                         borderRadius: '100px',
                         fontWeight: 700,

@@ -31,7 +31,7 @@ const Hero = () => {
                         style={{ zIndex: 10 }}
                     >
                         <span style={{
-                            color: '#598BBC',
+                            color: '#3d6f99',
                             textTransform: 'uppercase',
                             letterSpacing: '3px',
                             fontWeight: 700,
@@ -47,7 +47,7 @@ const Hero = () => {
                             marginBottom: '24px',
                             lineHeight: 0.95,
                         }}>
-                            Powrót do{'\u00A0'}<span style={{ color: '#CFA714' }}>sprawności</span> zaczyna się{'\u00A0'}tutaj
+                            Powrót do{'\u00A0'}<span style={{ color: '#996F00' }}>sprawności</span> zaczyna się{'\u00A0'}tutaj
                         </h1>
                         <p style={{
                             color: '#444A56',

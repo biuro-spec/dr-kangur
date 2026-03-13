@@ -60,7 +60,7 @@ const BlogCard = ({ article, index }) => {
                         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '12px' }}>
                             <span style={{
                                 background: 'rgba(89, 139, 188, 0.1)',
-                                color: '#598BBC',
+                                color: '#3d6f99',
                                 padding: '4px 12px',
                                 borderRadius: '100px',
                                 fontSize: '0.75rem',
@@ -68,7 +68,7 @@ const BlogCard = ({ article, index }) => {
                             }}>
                                 {article.category}
                             </span>
-                            <span style={{ display: 'flex', alignItems: 'center', gap: '4px', color: '#999', fontSize: '0.8rem' }}>
+                            <span style={{ display: 'flex', alignItems: 'center', gap: '4px', color: '#767676', fontSize: '0.8rem' }}>
                                 <Clock size={14} />
                                 {article.readTime} min
                             </span>
@@ -99,14 +99,14 @@ const BlogCard = ({ article, index }) => {
 
                         {/* Footer */}
                         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderTop: '1px solid #f0f0f0', paddingTop: '16px' }}>
-                            <span style={{ color: '#999', fontSize: '0.8rem' }}>
+                            <span style={{ color: '#767676', fontSize: '0.8rem' }}>
                                 {formatDate(article.publishDate)}
                             </span>
                             <span style={{
                                 display: 'flex',
                                 alignItems: 'center',
                                 gap: '4px',
-                                color: '#CFA714',
+                                color: '#996F00',
                                 fontWeight: 600,
                                 fontSize: '0.85rem',
                             }}>

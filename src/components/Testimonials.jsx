@@ -66,11 +66,11 @@ const Testimonials = () => {
         <section id="testimonials" style={{ padding: '96px 0' }}>
             <div className="container" style={{ maxWidth: '1300px', margin: '0 auto', padding: '0 32px' }}>
                 <div style={{ textAlign: 'center', marginBottom: '64px' }}>
-                    <span style={{ color: '#598BBC', textTransform: 'uppercase', letterSpacing: '0.1em', fontWeight: 700, fontSize: '0.75rem', marginBottom: '12px', display: 'block' }}>
+                    <span style={{ color: '#3d6f99', textTransform: 'uppercase', letterSpacing: '0.1em', fontWeight: 700, fontSize: '0.75rem', marginBottom: '12px', display: 'block' }}>
                         Opinie pacjentów
                     </span>
                     <h2 style={{ color: '#2C3034', fontSize: '3rem', marginBottom: '16px' }}>
-                        Co{'\u00A0'}mówią nasi <span style={{ color: '#CFA714' }}>pacjenci</span>
+                        Co{'\u00A0'}mówią nasi <span style={{ color: '#996F00' }}>pacjenci</span>
                     </h2>
                     <p style={{ color: '#444A56', maxWidth: '42rem', margin: '0 auto' }}>
                         Satysfakcja pacjentów jest dla nas najważniejsza. Oto opinie osób, które nam zaufały.
@@ -143,7 +143,7 @@ const Testimonials = () => {
                                 </p>
                                 <span style={{
                                     background: 'rgba(207, 167, 20, 0.08)',
-                                    color: '#CFA714',
+                                    color: '#996F00',
                                     padding: '4px 16px',
                                     borderRadius: '100px',
                                     fontSize: '0.8rem',

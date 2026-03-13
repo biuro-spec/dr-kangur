@@ -159,7 +159,7 @@ const About = () => {
                         viewport={{ once: true }}
                     >
                         <span style={{
-                            color: '#598BBC',
+                            color: '#3d6f99',
                             textTransform: 'uppercase',
                             letterSpacing: '0.1em',
                             fontWeight: 700,
@@ -176,7 +176,7 @@ const About = () => {
                             lineHeight: 1.05,
                         }}>
                             Klinika stworzona z{'\u00A0'}myślą o{'\u00A0'}
-                            <span style={{ color: '#CFA714' }}>Tobie</span>
+                            <span style={{ color: '#996F00' }}>Tobie</span>
                         </h2>
                         <p style={{
                             color: '#444A56',

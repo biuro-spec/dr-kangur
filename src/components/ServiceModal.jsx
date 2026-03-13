@@ -304,7 +304,7 @@ const ModalContent = ({ service, onClose, contentRef }) => {
                             background: '#f8f9fa',
                             borderRadius: '14px',
                             fontSize: '0.85rem',
-                            color: '#598BBC',
+                            color: '#3d6f99',
                             fontWeight: 500,
                         }}
                     >

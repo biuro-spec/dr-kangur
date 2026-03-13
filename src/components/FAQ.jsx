@@ -118,11 +118,11 @@ const FAQ = () => {
         <section id="faq" style={{ padding: '96px 0', background: '#f8f9fa' }}>
             <div className="container" style={{ maxWidth: '1300px', margin: '0 auto', padding: '0 32px' }}>
                 <div style={{ textAlign: 'center', marginBottom: '64px' }}>
-                    <span style={{ color: '#598BBC', textTransform: 'uppercase', letterSpacing: '0.1em', fontWeight: 700, fontSize: '0.75rem', marginBottom: '12px', display: 'block' }}>
+                    <span style={{ color: '#3d6f99', textTransform: 'uppercase', letterSpacing: '0.1em', fontWeight: 700, fontSize: '0.75rem', marginBottom: '12px', display: 'block' }}>
                         Masz pytania?
                     </span>
                     <h2 style={{ color: '#2C3034', fontSize: '3rem', marginBottom: '16px' }}>
-                        Najczęściej zadawane <span style={{ color: '#CFA714' }}>pytania</span>
+                        Najczęściej zadawane <span style={{ color: '#996F00' }}>pytania</span>
                     </h2>
                     <p style={{ color: '#444A56', maxWidth: '42rem', margin: '0 auto' }}>
                         Odpowiadamy na{'\u00A0'}najczęstsze pytania naszych pacjentów. Jeśli nie znalazłeś odpowiedzi, skontaktuj się z{'\u00A0'}nami.

@@ -31,11 +31,11 @@ const Team = () => {
         <section id="team" style={{ padding: '96px 0' }}>
             <div className="container" style={{ maxWidth: '1300px', margin: '0 auto', padding: '0 32px' }}>
                 <div style={{ textAlign: 'center', marginBottom: '64px' }}>
-                    <span style={{ color: '#598BBC', textTransform: 'uppercase', letterSpacing: '0.1em', fontWeight: 700, fontSize: '0.75rem', marginBottom: '12px', display: 'block' }}>
+                    <span style={{ color: '#3d6f99', textTransform: 'uppercase', letterSpacing: '0.1em', fontWeight: 700, fontSize: '0.75rem', marginBottom: '12px', display: 'block' }}>
                         Poznaj nasz zespół
                     </span>
                     <h2 style={{ color: '#2C3034', fontSize: '3rem', marginBottom: '16px' }}>
-                        Doświadczeni <span style={{ color: '#CFA714' }}>specjaliści</span>
+                        Doświadczeni <span style={{ color: '#996F00' }}>specjaliści</span>
                     </h2>
                     <p style={{ color: '#444A56', maxWidth: '42rem', margin: '0 auto' }}>
                         Nasz zespół tworzą wykwalifikowani fizjoterapeuci z{'\u00A0'}wieloletnim doświadczeniem, którzy nieustannie podnoszą swoje kwalifikacje.
@@ -76,7 +76,7 @@ const Team = () => {
                             <h3 style={{ fontSize: '1.35rem', fontWeight: 700, color: '#2C3034', marginBottom: '4px' }}>
                                 {member.name}
                             </h3>
-                            <p style={{ color: '#CFA714', fontWeight: 600, fontSize: '0.9rem', marginBottom: '16px' }}>
+                            <p style={{ color: '#996F00', fontWeight: 600, fontSize: '0.9rem', marginBottom: '16px' }}>
                                 {member.role}
                             </p>
                             <p style={{ color: '#444A56', lineHeight: 1.7, fontSize: '0.9rem', marginBottom: '20px' }}>

@@ -123,11 +123,11 @@ const Contact = () => {
             <div style={{ maxWidth: '1300px', margin: '0 auto', padding: '0 32px', position: 'relative', zIndex: 2 }}>
                 {/* Section header */}
                 <div style={{ textAlign: 'center', marginBottom: '64px' }}>
-                    <span style={{ color: '#598BBC', textTransform: 'uppercase', letterSpacing: '0.15em', fontWeight: 700, fontSize: '0.75rem', marginBottom: '12px', display: 'block' }}>
+                    <span style={{ color: '#3d6f99', textTransform: 'uppercase', letterSpacing: '0.15em', fontWeight: 700, fontSize: '0.75rem', marginBottom: '12px', display: 'block' }}>
                         Skontaktuj się z{'\u00A0'}nami
                     </span>
                     <h2 style={{ color: '#2C3034', fontSize: '3rem', marginBottom: '16px' }}>
-                        Zapisz się na{'\u00A0'}<span style={{ color: '#CFA714' }}>wizytę</span>
+                        Zapisz się na{'\u00A0'}<span style={{ color: '#996F00' }}>wizytę</span>
                     </h2>
                     <p style={{ color: '#444A56', maxWidth: '42rem', margin: '0 auto' }}>
                         Skontaktuj się z{'\u00A0'}nami telefonicznie lub wypełnij formularz – oddzwonimy najszybciej jak to{'\u00A0'}możliwe.

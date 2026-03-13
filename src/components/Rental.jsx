@@ -219,7 +219,7 @@ const Rental = () => {
                                 <Phone size={28} style={{ color: '#CFA714', WebkitTextFillColor: 'initial' }} />
                                 604 246 994
                             </a>
-                            <p style={{ fontSize: '0.85rem', color: 'rgba(255,255,255,0.45)' }}>
+                            <p style={{ fontSize: '0.85rem', color: 'rgba(255,255,255,0.7)' }}>
                                 Zadzwoń i{'\u00A0'}zapytaj o{'\u00A0'}dostępność i{'\u00A0'}warunki wypożyczenia
                             </p>
                         </div>
