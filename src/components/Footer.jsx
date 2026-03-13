@@ -424,7 +424,7 @@ const Footer = () => {
                         gap: '8px',
                     }}>
                         <p style={{
-                            color: 'rgba(255,255,255,0.6)',
+                            color: 'rgba(255,255,255,0.75)',
                             fontSize: '0.8rem',
                             margin: 0,
                         }}>
@@ -438,7 +438,7 @@ const Footer = () => {
                             flexWrap: 'wrap',
                             gap: '6px',
                             fontSize: '0.8rem',
-                            color: 'rgba(255,255,255,0.45)',
+                            color: 'rgba(255,255,255,0.7)',
                             textAlign: 'center',
                         }}>
                             <Code size={14} style={{ opacity: 0.6 }} />
