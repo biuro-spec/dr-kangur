@@ -65,12 +65,12 @@ const Testimonials = () => {
     return (
         <section id="testimonials" style={{ padding: '96px 0' }}>
             <style>{`
-                .testimonial-card { height: 300px; }
+                .testimonial-card { height: 380px; }
                 @media (max-width: 1023px) {
-                    .testimonial-card { height: 360px; }
+                    .testimonial-card { height: 420px; }
                 }
                 @media (max-width: 480px) {
-                    .testimonial-card { height: 400px; }
+                    .testimonial-card { height: 480px; }
                 }
             `}</style>
             <div className="container" style={{ maxWidth: '1300px', margin: '0 auto', padding: '0 32px' }}>
@@ -123,7 +123,7 @@ const Testimonials = () => {
                                 animate="center"
                                 exit="exit"
                                 transition={{ duration: 0.4, ease: 'easeInOut' }}
-                                style={{ textAlign: 'center', width: '100%', position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', padding: '64px 48px 48px' }}
+                                style={{ textAlign: 'center', width: '100%', position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', padding: '0 48px', boxSizing: 'border-box' }}
                             >
                                 {/* Stars */}
                                 <div style={{ display: 'flex', justifyContent: 'center', gap: '4px', marginBottom: '24px' }}>
