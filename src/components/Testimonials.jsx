@@ -64,6 +64,15 @@ const Testimonials = () => {
 
     return (
         <section id="testimonials" style={{ padding: '96px 0' }}>
+            <style>{`
+                .testimonial-card { min-height: 340px; }
+                @media (max-width: 1023px) {
+                    .testimonial-card { min-height: 420px; }
+                }
+                @media (max-width: 480px) {
+                    .testimonial-card { min-height: 460px; }
+                }
+            `}</style>
             <div className="container" style={{ maxWidth: '1300px', margin: '0 auto', padding: '0 32px' }}>
                 <div style={{ textAlign: 'center', marginBottom: '64px' }}>
                     <span style={{ color: '#3d6f99', textTransform: 'uppercase', letterSpacing: '0.1em', fontWeight: 700, fontSize: '0.75rem', marginBottom: '12px', display: 'block' }}>
@@ -97,13 +106,12 @@ const Testimonials = () => {
                         <Quote size={28} color="white" />
                     </div>
 
-                    <div style={{
+                    <div className="testimonial-card" style={{
                         background: 'white',
                         borderRadius: '48px',
                         padding: '64px 48px 48px',
                         boxShadow: '0 20px 50px rgba(44, 48, 52, 0.08)',
                         border: '1px solid rgba(0, 0, 0, 0.03)',
-                        minHeight: '300px',
                         display: 'flex',
                         flexDirection: 'column',
                         alignItems: 'center',
