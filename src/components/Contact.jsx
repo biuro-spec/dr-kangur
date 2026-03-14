@@ -334,7 +334,7 @@ const Contact = () => {
                                     name="message"
                                     value={formData.message}
                                     onChange={handleChange}
-                                    placeholder="Opisz z\u00A0czym możemy pomóc..."
+                                    placeholder={"Opisz z\u00A0czym możemy pomóc..."}
                                     rows="4"
                                     style={{ ...inputStyle('message'), resize: 'vertical', minHeight: '110px' }}
                                     onFocus={(e) => { e.target.style.borderColor = '#598BBC'; e.target.style.boxShadow = '0 0 0 3px rgba(89, 139, 188, 0.1)'; }}
